@@ -16,12 +16,21 @@
 */
 /* BEGGIN */
 /* BOX-SIZING */
-*, *:before, *:after {
+*,
+*:before,
+*:after {
   box-sizing: border-box;
 }
 
 /* variables */
 /* reset */
+* {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  list-style-type: none;
+}
+
 /* base styles */
 /* fonts */
 /* mobile styles */

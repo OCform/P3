@@ -18,21 +18,29 @@
 /* BEGGIN */
 
 /* BOX-SIZING */
-
-*, *:before, *:after {
-    box-sizing         : border-box;
+*, 
+*:before, 
+*:after {
+    box-sizing: border-box;
 }
 
 /* variables */
-
-$primary-color: #9356DC;
-$secondary-color: #FF79DA;
-$color-tertiary: #99E2D0;
+:root {
+    $primary-color: #9356DC;
+    $secondary-color: #FF79DA;
+    $color-tertiary: #99E2D0;
+}
 
 /* reset */
-
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    list-style-type: none;
+}
 
 /* base styles */
+
 
 /* fonts */
 
