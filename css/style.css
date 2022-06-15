@@ -15,6 +15,11 @@
 @import "./pages/project";
 */
 /* BEGGIN */
+/* BOX-SIZING */
+*, *:before, *:after {
+  box-sizing: border-box;
+}
+
 /* variables */
 /* reset */
 /* base styles */
