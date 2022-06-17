@@ -1,5 +1,7 @@
+@use '../util' as u;
+
 h1 {
-    font-family: $title-font;
+    font-family: u.$title-font;
 }
 
 h1,
