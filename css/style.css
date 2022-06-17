@@ -1,39 +1,40 @@
-/*
-@import "./utils/variables";
-@import "./utils/functions";
-@import "./utils/mixins";
-@import "./utils/extensions";
-@import "./base/base";
-@import "./base/typography";
-@import "./components/buttons";
-@import "./layouts/header";
-@import "./layouts/nav";
-@import "./layouts/container";
-@import "./layouts/form";
-@import "./pages/work";
-@import "./pages/about";
-@import "./pages/project";
-*/
-/* BEGGIN */
-/* BOX-SIZING */
-*,
-*:before,
-*:after {
+html {
   box-sizing: border-box;
+  font-size: 100%;
 }
 
-/* variables */
-/* reset */
-* {
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
   margin: 0;
   padding: 0;
-  text-decoration: none;
-  list-style-type: none;
+  font-family: "Roboto", sans-serif;
+  background-color: hsl(0deg, 0%, 11%);
+  color: hsl(0deg, 0%, 100%);
 }
 
-/* base styles */
-/* fonts */
-/* mobile styles */
-/* small tablet styles */
-/* large tablet & laptop styles */
-/* desktop styles *//*# sourceMappingURL=style.css.map */
+h1 {
+  font-family: "Shrikhand", cursive;
+}
+
+h1,
+h2,
+h3 {
+  font-weight: 700;
+  line-height: 1.1;
+  margin-top: 0;
+}
+
+p {
+  margin-top: 0;
+}
+
+a,
+a:visited,
+a:active {
+  text-decoration: none;
+}/*# sourceMappingURL=style.css.map */
