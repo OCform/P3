@@ -7,43 +7,81 @@
     <meta name="description" content="Un outil de planification de vacances ! Le site de l'agence Booki permet aux usagers de trouver des hébergements et des activités dans la ville de leur choix.">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="shortcut icon" type="image/png" href="./images/logo/ohmyfood.png"/>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"/>    
     <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>    
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Shrikhand&display=swap" rel="stylesheet">    
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous"/>
     <link rel="stylesheet" href="./css/style.css"/>
     <title>Ohmyfood</title>
 </head>
 <body>
     <header>
-        <div class="header__logo">
-            <img src="./images/logo/ohmyfood@2x.svg" alt="logo">
+        <div class="header container">
+            <div class="header__logo">
+                <img src="./images/logo/ohmyfood.png" alt="logo">
+            </div>
         </div>
     </header>
-    <main class="container">
-        <form action="#" method="get" id="form-search" >
-            <em class="fa fa-map-marker-alt"></em>
-            <label for="search" class="sr-only" id="searchLabel">Rechercher</label>          
-            <input id="search" aria-labelledby="searchLabel" class="p-holder" type="search" placeholder="Paris, Belleville" name="search">
-        </form>
-        <div class="title">
-            <h1>Réservez le menu qui vous convient</h1>
-            <p>Découvrez des restaurants d'exception, sélectionnés par nos soins</p>
-        </div>
-        <div class="btn form">
-            <button class="search" type="submit" form="form-search" value="Submit">Explorer nos restaurants</button>
-        </div>
-        
-        <section class="fonctionnement">
-            <div class="fonctionnement__title">
-                <h2>Fonctionnement</h2>
+    <main>
+        <div class="main container">
+            <div class="form">
+                <form action="#" method="get" id="form-search" >
+                    <em class="fa fa-map-marker-alt"></em>
+                    <label for="search" class="sr-only" id="searchLabel">Rechercher</label>          
+                    <input id="search" aria-labelledby="searchLabel" class="p-holder" type="search" placeholder="Paris, Belleville" name="search">
+                </form>
             </div>
-            <a href="#" style="--clr:#1e9bff"><span>Button</span><i></i></a>
-            <a href="#" style="--clr:#ff1867"><span>Button</span><i></i></a>
-            <a href="#" style="--clr:#6eff3e"><span>Button</span><i></i></a>
-        </section>
+            <div class="title">
+                <h1>Réservez le menu qui vous convient</h1>
+                <p>Découvrez des restaurants d'exception, sélectionnés par nos soins</p>            
+                <div class="btn">
+                    <button class="search" type="submit" form="form-search" value="Submit">Explorer nos restaurants</button>
+                </div>
+            </div>            
+            <section class="fonctionnement">
+                <div class="fonctionnement__title">
+                    <h2>Fonctionnement</h2>
+                </div>
+                <a href="#"><span>Button</span><i></i></a>
+                <a href="#"><span>Button</span><i></i></a>
+                <a href="#"><span>Button</span><i></i></a>
+            </section>
+            <section class="restaurants">
+                <div class="restaurants__title">
+                    <h2>Restaurants</h2>
+                </div>
+                <div class="row__restaurants">
+                    <div class="column__restaurants">
+                        <a href="#"><span>Box</span></a>
+                    </div>
+                    <div class="column__restaurants">
+                        <a href="#"><span>Box</span></a>
+                    </div>
+                    <div class="column__restaurants">
+                        <a href="#"><span>Box</span></a>
+                    </div>
+                    <div class="column__restaurants">
+                        <a href="#"><span>Box</span></a>
+                    </div>
+                </div>
+            </section>
+        </div>
     </main>
-    <footer></footer>
+    <footer>
+        <div class="footer container">
+            <div class="footer__logo">
+                <img src="./images/logo/ohmyfood@2x.svg" alt="logo">
+            </div>
+            <nav id="footer__navigation">
+                <ul>
+                    <li><a href="#">Proposer un restaurant</a></li>
+                    <li><a href=#>Devenir partenaire</a></li>
+                    <li><a href="#">Mentions légales</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>      
+            </nav>
+        </div>
+    </footer>
 </body>
 </html>
