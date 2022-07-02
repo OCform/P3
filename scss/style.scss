@@ -1,11 +1,7 @@
-//@forward 'globals';
-
-//variables
 $primary-color: #9356DC;
 $secondary-color: #FF79DA;
 $color-tertiary: #99E2D0;
 
-//base
 html {
     box-sizing: border-box;
     font-size: 100%;
@@ -29,9 +25,9 @@ body {
     justify-content: flex-start;
 }
 
-// typography
 h1,
 h2,
+h3,
 p,
 a,
 ul {
@@ -50,17 +46,11 @@ ul {
     list-style: none;
 }
 
-h1 {
-    font-family: 'Shrikhand', cursive;
-    font-size: 22px;
-    margin-bottom: 20px;
-}
-
 h1,
-h2 {
+h2,
+h3 {
     font-weight: 700;
     line-height: 1.1;
-    margin-top: 0;
 }
 
 .container {
@@ -90,12 +80,15 @@ h2 {
     justify-content: center;
     background-color: #e9e9e9;
     border-top: 5px solid #d1d1d1;
-}
-
-.placeholder {
-    color: #000;
-    background-color: #e1e1e1;
-    border: #e1e1e1;
+    em {
+        font-size: 20px;
+    }
+    .placeholder {
+        color: #000;
+        background-color: #e9e9e9;
+        border: #e9e9e9;
+        padding-left: 10px;
+    }
 }
 
 .main__title {    
@@ -104,10 +97,11 @@ h2 {
     background-color: #f5f5f5;
     .title {
         font-family: 'Shrikhand', cursive;
-        font-size: 22px;
+        font-size: 12px;
         margin-bottom: 20px;
     }
     p {
+        color: #555;
         margin-bottom: 30px;
     }
     .btn__form button {
@@ -117,13 +111,11 @@ h2 {
         border-radius: 50px;
         color: #fff;
         font-weight: 700;
-        background: linear-gradient($secondary-color, $primary-color);
-        border: 1px solid $secondary-color;
+        background: linear-gradient(to bottom right, $secondary-color, $primary-color);
+        border: 1px solid transparent;
         cursor: pointer;
     }
 }
-
-
 
 .title__fonctionnement {
     margin: 60px 0 30px 20px ;
@@ -195,7 +187,7 @@ h2 {
         flex: 100%;
         max-width: 100%;
     }
-    .column__restaurants .card__restaurants {
+    .card__restaurants {
         margin-top: 16px;
         vertical-align: middle;
         width: 100%;
@@ -214,5 +206,33 @@ h2 {
     }
     .container__restaurants {
         padding: 2px 16px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        h3 {
+            margin: 0;
+            padding: 0;
+        }
+        .heart__restaurants {            
+            font-size: 28px;
+            .fa-solid {                
+                display: none;
+                opacity: 0;
+                color: $secondary-color;
+            }
+            .fa-regular {
+                opacity: 1;                 
+            }            
+            &:hover {
+                .fa-solid {
+                    opacity: 1;
+                    display: initial;
+                }
+                .fa-regular {
+                    display: none;
+                    opacity: 0;
+                }
+            }
+        }
     }     
 }

@@ -23,6 +23,7 @@ body {
 
 h1,
 h2,
+h3,
 p,
 a,
 ul {
@@ -41,17 +42,11 @@ ul {
   list-style: none;
 }
 
-h1 {
-  font-family: "Shrikhand", cursive;
-  font-size: 22px;
-  margin-bottom: 20px;
-}
-
 h1,
-h2 {
+h2,
+h3 {
   font-weight: 700;
   line-height: 1.1;
-  margin-top: 0;
 }
 
 .container {
@@ -82,11 +77,14 @@ h2 {
   background-color: #e9e9e9;
   border-top: 5px solid #d1d1d1;
 }
-
-.placeholder {
+.form em {
+  font-size: 20px;
+}
+.form .placeholder {
   color: #000;
-  background-color: #e1e1e1;
-  border: #e1e1e1;
+  background-color: #e9e9e9;
+  border: #e9e9e9;
+  padding-left: 10px;
 }
 
 .main__title {
@@ -96,10 +94,11 @@ h2 {
 }
 .main__title .title {
   font-family: "Shrikhand", cursive;
-  font-size: 22px;
+  font-size: 12px;
   margin-bottom: 20px;
 }
 .main__title p {
+  color: #555;
   margin-bottom: 30px;
 }
 .main__title .btn__form button {
@@ -109,8 +108,8 @@ h2 {
   border-radius: 50px;
   color: #fff;
   font-weight: 700;
-  background: linear-gradient(#FF79DA, #9356DC);
-  border: 1px solid #FF79DA;
+  background: linear-gradient(to bottom right, #FF79DA, #9356DC);
+  border: 1px solid transparent;
   cursor: pointer;
 }
 
@@ -183,7 +182,7 @@ h2 {
   flex: 100%;
   max-width: 100%;
 }
-.restaurants .column__restaurants .card__restaurants {
+.restaurants .card__restaurants {
   margin-top: 16px;
   vertical-align: middle;
   width: 100%;
@@ -191,7 +190,7 @@ h2 {
   transition: 0.3s;
   border-radius: 5px;
 }
-.restaurants .column__restaurants .card__restaurants:hover {
+.restaurants .card__restaurants:hover {
   box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
 }
 .restaurants img {
@@ -203,4 +202,30 @@ h2 {
 }
 .restaurants .container__restaurants {
   padding: 2px 16px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.restaurants .container__restaurants h3 {
+  margin: 0;
+  padding: 0;
+}
+.restaurants .container__restaurants .heart__restaurants {
+  font-size: 28px;
+}
+.restaurants .container__restaurants .heart__restaurants .fa-solid {
+  display: none;
+  opacity: 0;
+  color: #FF79DA;
+}
+.restaurants .container__restaurants .heart__restaurants .fa-regular {
+  opacity: 1;
+}
+.restaurants .container__restaurants .heart__restaurants:hover .fa-solid {
+  opacity: 1;
+  display: initial;
+}
+.restaurants .container__restaurants .heart__restaurants:hover .fa-regular {
+  display: none;
+  opacity: 0;
 }/*# sourceMappingURL=style.css.map */
