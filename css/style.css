@@ -109,7 +109,7 @@ h3 {
   color: #fff;
   font-weight: 700;
   background: linear-gradient(to bottom right, #FF79DA, #9356DC);
-  border: 1px solid transparent;
+  border: 1px solid #FF79DA;
   cursor: pointer;
 }
 
@@ -213,19 +213,53 @@ h3 {
 .restaurants .container__restaurants .heart__restaurants {
   font-size: 28px;
 }
+@-webkit-keyframes fade-out {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+@keyframes fade-out {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+@-webkit-keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
 .restaurants .container__restaurants .heart__restaurants .fa-solid {
-  display: none;
-  opacity: 0;
   color: #FF79DA;
+  display: none;
 }
 .restaurants .container__restaurants .heart__restaurants .fa-regular {
-  opacity: 1;
+  color: #aaa;
+  display: block;
 }
 .restaurants .container__restaurants .heart__restaurants:hover .fa-solid {
-  opacity: 1;
-  display: initial;
+  display: block;
+  -webkit-animation: fade-in 3s ease-in;
+          animation: fade-in 3s ease-in;
 }
 .restaurants .container__restaurants .heart__restaurants:hover .fa-regular {
   display: none;
-  opacity: 0;
+  -webkit-animation: fade-out 1s ease-in;
+          animation: fade-out 1s ease-in;
 }/*# sourceMappingURL=style.css.map */
