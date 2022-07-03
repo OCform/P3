@@ -50,7 +50,7 @@ h3 {
 }
 
 .container {
-  width: 375px;
+  width: 373px;
   margin: 0 auto;
 }
 
@@ -70,29 +70,27 @@ h3 {
   align-content: center;
 }
 
-.form {
+.main__form {
   padding: 10px;
   display: flex;
   justify-content: center;
-  background-color: #e9e9e9;
-  border-top: 5px solid #d1d1d1;
+  background: linear-gradient(#bbb 1%, #e9e9e9 10%);
 }
-.form em {
+.main__form em {
   font-size: 20px;
 }
-.form .placeholder {
+.main__form .placeholder {
   color: #000;
-  background-color: #e9e9e9;
-  border: #e9e9e9;
+  background-color: transparent;
+  border: transparent;
   padding-left: 10px;
 }
-
 .main__title {
   padding: 40px;
   text-align: center;
   background-color: #f5f5f5;
 }
-.main__title .title {
+.main__title .main__firstitle {
   font-family: "Shrikhand", cursive;
   font-size: 12px;
   margin-bottom: 20px;
@@ -101,7 +99,7 @@ h3 {
   color: #555;
   margin-bottom: 30px;
 }
-.main__title .btn__form button {
+.main__title button {
   width: 230px;
   height: 50px;
   margin-bottom: 20px;
@@ -113,11 +111,13 @@ h3 {
   cursor: pointer;
 }
 
-.title__fonctionnement {
-  margin: 60px 0 30px 20px;
+.fonctionnement {
+  padding: 60px 0;
 }
-
-.btn__fonctionnement {
+.fonctionnement__title {
+  margin: 0 0 30px 20px;
+}
+.fonctionnement__btn {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -126,8 +126,7 @@ h3 {
   margin-top: 10px;
   margin-bottom: 50px;
 }
-
-.btn__fonctionnement a {
+.fonctionnement__btn a {
   position: relative;
   width: 320px;
   height: 80px;
@@ -141,16 +140,16 @@ h3 {
   transition: 0.5s;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
 }
-.btn__fonctionnement a .fa {
+.fonctionnement__btn a .fa {
   color: #808080;
   font-size: 22px;
   padding-right: 25px;
 }
-.btn__fonctionnement a span {
+.fonctionnement__btn a span {
   margin-right: 20px;
   font-weight: 700;
 }
-.btn__fonctionnement a .number {
+.fonctionnement__btn a .number {
   position: absolute;
   width: 30px;
   height: 30px;
@@ -165,52 +164,60 @@ h3 {
   padding-left: 8px;
   padding-top: 4px;
 }
-.btn__fonctionnement a:hover {
+.fonctionnement__btn a:hover {
   background-color: #f7f2fc;
   box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
 }
-.btn__fonctionnement a:hover .fa {
+.fonctionnement__btn a:hover .fa {
   color: #9356DC;
 }
 
-.restaurants .row__restaurants {
+.restaurants {
+  padding: 60px 0;
+  background-color: #f5f5f5;
+}
+.restaurants__title {
+  margin: 0 0 0px 20px;
+}
+.restaurants__row {
   display: flex;
   flex-wrap: wrap;
-  padding: 4px 4px;
+  gap: 20px;
 }
-.restaurants .column__restaurants {
+.restaurants__column {
   flex: 100%;
   max-width: 100%;
 }
-.restaurants .card__restaurants {
-  margin-top: 16px;
+.restaurants__card {
+  background-color: #fff;
   vertical-align: middle;
-  width: 100%;
+  margin: auto;
+  width: 350px;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
   transition: 0.3s;
-  border-radius: 5px;
+  border-radius: 25px;
 }
-.restaurants .card__restaurants:hover {
+.restaurants__card:hover {
   box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
 }
 .restaurants img {
-  border-radius: 5px 5px 0 0;
-  width: 367px;
+  border-radius: 25px 25px 0 0;
+  width: 100%;
   height: 200px;
   -o-object-fit: cover;
      object-fit: cover;
 }
-.restaurants .container__restaurants {
+.restaurants__container {
   padding: 2px 16px;
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
-.restaurants .container__restaurants h3 {
+.restaurants__container h3 {
   margin: 0;
   padding: 0;
 }
-.restaurants .container__restaurants .heart__restaurants {
+.restaurants__heart {
   font-size: 28px;
 }
 @-webkit-keyframes fade-out {
@@ -245,21 +252,40 @@ h3 {
     opacity: 1;
   }
 }
-.restaurants .container__restaurants .heart__restaurants .fa-solid {
+.restaurants__heart .fa-solid {
   color: #FF79DA;
   display: none;
 }
-.restaurants .container__restaurants .heart__restaurants .fa-regular {
-  color: #aaa;
+.restaurants__heart .fa-regular {
+  color: #000;
   display: block;
 }
-.restaurants .container__restaurants .heart__restaurants:hover .fa-solid {
+.restaurants__heart:hover .fa-solid {
   display: block;
-  -webkit-animation: fade-in 3s ease-in;
-          animation: fade-in 3s ease-in;
+  -webkit-animation: fade-in 3s ease-out;
+          animation: fade-in 3s ease-out;
 }
-.restaurants .container__restaurants .heart__restaurants:hover .fa-regular {
+.restaurants__heart:hover .fa-regular {
+  -webkit-animation: fade-out 3s ease-in;
+          animation: fade-out 3s ease-in;
   display: none;
-  -webkit-animation: fade-out 1s ease-in;
-          animation: fade-out 1s ease-in;
+}
+
+.footer {
+  background-color: #555;
+  padding: 30px;
+  color: #fff;
+}
+.footer__logo {
+  margin-bottom: 10px;
+}
+.footer__logo img {
+  width: 40%;
+}
+.footer__navigation a {
+  color: #fff;
+  line-height: 1.5;
+}
+.footer__navigation a .fa-solid {
+  margin-right: 10px;
 }/*# sourceMappingURL=style.css.map */

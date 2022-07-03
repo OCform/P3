@@ -39,7 +39,7 @@ a,
 a:visited,
 a:active {
     text-decoration: none;
-    color: #000;
+    color: #000;    
 }
 
 ul {
@@ -54,7 +54,7 @@ h3 {
 }
 
 .container {
-    width: 375px;
+    width: 373px;
     margin: 0 auto;
 }
 
@@ -74,137 +74,144 @@ h3 {
     align-content: center;
 }
 
-.form {
-    padding: 10px;
-    display: flex;
-    justify-content: center;
-    background-color: #e9e9e9;
-    border-top: 5px solid #d1d1d1;
-    em {
-        font-size: 20px;
+.main {
+    &__form {
+        padding: 10px;
+        display: flex;
+        justify-content: center;  
+        background: linear-gradient(#bbb 1%, #e9e9e9 10%);      
+        em {
+            font-size: 20px;
+        }
+        .placeholder {
+            color: #000;
+            background-color: transparent;
+            border: transparent;
+            padding-left: 10px;
+        }
     }
-    .placeholder {
-        color: #000;
-        background-color: #e9e9e9;
-        border: #e9e9e9;
-        padding-left: 10px;
+    &__title {    
+        padding: 40px;
+        text-align: center;
+        background-color: #f5f5f5;
+        .main__firstitle {
+            font-family: 'Shrikhand', cursive;
+            font-size: 12px;
+            margin-bottom: 20px;
+        }
+        p {
+            color: #555;
+            margin-bottom: 30px;
+        }
+        button {
+            width: 230px;
+            height: 50px;
+            margin-bottom: 20px;
+            border-radius: 50px;
+            color: #fff;
+            font-weight: 700;
+            background: linear-gradient(to bottom right, $secondary-color, $primary-color);
+            border: 1px solid $secondary-color;
+            cursor: pointer;
+        }
     }
 }
 
-.main__title {    
-    padding: 40px;
-    text-align: center;
-    background-color: #f5f5f5;
-    .title {
-        font-family: 'Shrikhand', cursive;
-        font-size: 12px;
-        margin-bottom: 20px;
+.fonctionnement {
+    padding: 60px 0;
+    &__title {
+        margin: 0 0 30px 20px;
     }
-    p {
-        color: #555;
-        margin-bottom: 30px;
+    &__btn {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        gap: 30px;
+        margin-top: 10px;
+        margin-bottom: 50px;
     }
-    .btn__form button {
-        width: 230px;
-        height: 50px;
-        margin-bottom: 20px;
-        border-radius: 50px;
-        color: #fff;
-        font-weight: 700;
-        background: linear-gradient(to bottom right, $secondary-color, $primary-color);
-        border: 1px solid $secondary-color;
-        cursor: pointer;
-    }
-}
-
-.title__fonctionnement {
-    margin: 60px 0 30px 20px ;
-}
-
-.btn__fonctionnement {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    gap: 30px;
-    margin-top: 10px;
-    margin-bottom: 50px;
-}
-
-.btn__fonctionnement a {
-    position: relative;
-    width: 320px;
-    height: 80px;
-    border: 1px solid #f4f4f4;
-    position: relative;
-    background-color: #f5f5f5;  
-    border-radius: 20px;     
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    transition: 0.5s;
-    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);    
-    .fa {            
-        color: #808080;
-        font-size: 22px;
-        padding-right: 25px;
-    }
-    span {
-        margin-right: 20px;
-        font-weight: 700;
-    }
-    .number {
-        position: absolute;
-        width: 30px;
-        height: 30px;
-        display: inline-block;
-        color: #fff;
-        background-color: $primary-color;
-        border-radius: 50%;
-        font-size: 20px;
-        font-weight: 900;
-        top: 25px;
-        left: -15px;
-        padding-left: 8px;
-        padding-top: 4px;
-    }
-    &:hover {
-        background-color: lighten($primary-color, 37%);
-        box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
-        .fa {
-            color: $primary-color;
+    &__btn a {
+        position: relative;
+        width: 320px;
+        height: 80px;
+        border: 1px solid #f4f4f4;
+        position: relative;
+        background-color: #f5f5f5;  
+        border-radius: 20px;     
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transition: 0.5s;
+        box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);    
+        .fa {            
+            color: #808080;
+            font-size: 22px;
+            padding-right: 25px;
+        }
+        span {
+            margin-right: 20px;
+            font-weight: 700;
+        }
+        .number {
+            position: absolute;
+            width: 30px;
+            height: 30px;
+            display: inline-block;
+            color: #fff;
+            background-color: $primary-color;
+            border-radius: 50%;
+            font-size: 20px;
+            font-weight: 900;
+            top: 25px;
+            left: -15px;
+            padding-left: 8px;
+            padding-top: 4px;
+        }
+        &:hover {
+            background-color: lighten($primary-color, 37%);
+            box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+            .fa {
+                color: $primary-color;
+            }
         }
     }
 }
 
 .restaurants {
-    .row__restaurants {
+    padding: 60px 0;       
+    background-color: #f5f5f5;
+    &__title {
+        margin: 0 0 0px 20px;
+    }
+    &__row {
         display: flex;
         flex-wrap: wrap;
-        padding: 4px 4px;
+        gap: 20px;
     }
-    .column__restaurants {
+    &__column {
         flex: 100%;
-        max-width: 100%;
+        max-width: 100%;        
     }
-    .card__restaurants {
-        margin-top: 16px;
+    &__card {
+        background-color: #fff;        
         vertical-align: middle;
-        width: 100%;
+        margin: auto;
+        width: 350px;
         box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
         transition: 0.3s;
-        border-radius: 5px;
+        border-radius: 25px;
         &:hover {
             box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
         }
     }
     img {
-        border-radius: 5px 5px 0 0;
-        width: 367px;
+        border-radius: 25px 25px 0 0;
+        width: 100%;
         height: 200px;
         object-fit: cover;
     }
-    .container__restaurants {
+    &__container {
         padding: 2px 16px;
         display: flex;
         align-items: center;
@@ -212,43 +219,62 @@ h3 {
         h3 {
             margin: 0;
             padding: 0;
+        }        
+    }
+    &__heart { 
+        font-size: 28px;
+        @keyframes fade-out {
+            from {
+                opacity: 1;
+            }        
+            to {
+                opacity: 0;
+            }
         }
-        .heart__restaurants { 
-            font-size: 28px;
-            @keyframes fade-out {
-                from {
-                    opacity: 1;
-                }        
-                to {
-                    opacity: 0;
-                }
+        @keyframes fade-in {
+            from {
+                opacity: 0;
+            }        
+            to {
+                opacity: 1;
             }
-            @keyframes fade-in {
-                from {
-                    opacity: 0;
-                }        
-                to {
-                    opacity: 1;
-                }
+        }
+        .fa-solid {  
+            color: $secondary-color;
+            display: none;
+        }
+        .fa-regular {   
+            color: #000;             
+            display: block;                
+        }            
+        &:hover {
+            .fa-solid {
+                display: block;
+                animation: fade-in 3s ease-out;                    
             }
-            .fa-solid {  
-                color: $secondary-color;
+            .fa-regular {
+                animation: fade-out 3s ease-in; 
                 display: none;
-            }
-            .fa-regular {   
-                color: #aaa;             
-                display: block;                
-            }            
-            &:hover {
-                .fa-solid {
-                    display: block;
-                    animation: fade-in 3s ease-in;                    
-                }
-                .fa-regular {                    
-                    display: none;
-                    animation: fade-out 1s ease-in;
-                }
             }
         }
     }     
+}
+
+.footer {
+    background-color: #555;
+    padding: 30px;
+    color: #fff;
+    &__logo {
+        margin-bottom: 10px;
+        img {
+            width: 40%;
+        }
+    }
+    &__navigation a {
+        color: #fff;
+        line-height: 1.5;
+        .fa-solid {
+            margin-right: 10px;
+        }
+    }
 }
