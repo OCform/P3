@@ -1,6 +1,7 @@
 $primary-color: #9356DC;
 $secondary-color: #FF79DA;
 $color-tertiary: #99E2D0;
+$grey-light: #f5f5f5;
 
 html {
     box-sizing: border-box;
@@ -20,9 +21,6 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
-    width: 377px;
-    height: 3000px;
-    border: 1px solid red;
 }
 
 h1,
@@ -88,16 +86,16 @@ h3 {
 }
 
 .main {    
-    .restaurant {               
-        background-color: rgba(240,240,240,240);
-        padding-bottom: 30px;
+    .restaurant {
+        padding-bottom: 50px;
         &__title {
+            margin-left: 10px;
+            margin-bottom: 20px;
             font-family: 'Shrikhand', cursive;
             font-size: 12px;
         }
         &__card {
             position: relative;
-            background-color: #fff;        
             vertical-align: middle;           
             margin: auto;
             width: 100%;
@@ -121,12 +119,14 @@ h3 {
             display: flex;
             align-items: center;
             justify-content: space-between;
-            background-color: rgb(240, 240, 240);
+            background-color: $grey-light;
             margin: 0px;
             border-radius: 25px 25px 0 0;
         }
         &__heart { 
-            font-size: 24px;
+            font-size: 28px;
+            margin-right: 10px;
+            margin-bottom: 28px;
             @keyframes fade-out {
                 from {
                     opacity: 1;
@@ -173,16 +173,18 @@ h3 {
             }
         }        
         position: relative;
-        background-color: rgba(240,240,240,240);
+        background-color: rgba(240,240,240);
         padding: 0 0 100px 0;
         .menu { 
-            animation: fade-in 3s ease-in;           
+            animation: fade-in 3s ease-out;           
             &__title {
+                font-size: 12px;
                 text-transform: uppercase;
-                margin: 0 0 0px 30px;line-height: 2;
+                margin: 0 0 0px 30px;
+                line-height: 2;
                 hr {
                     color: $color-tertiary;
-                    width: 40px;                    
+                    width: 30px;                    
                     margin: 0;
                 }
             }
@@ -206,8 +208,12 @@ h3 {
                 flex-wrap: nowrap;
                 transition: 0.5s;
                 box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+                .text {
+                    font-size: 12px;
+                    line-height: 1.5;
+                }
                 .weight {
-                    font-size: 18px;
+                    font-size: 14px;
                     font-weight: 700;
                 }               
                 &:hover {                    
@@ -215,14 +221,17 @@ h3 {
                     .menu__green-btn {
                         display: block;
                         margin: 0;                 
-                        animation: fade-in 3s ease-in;
+                        animation: fade-in 3s ease-out;
                     }
                 }
             } 
-            .text, .price {
-                margin: 20px;
+            .price {
+                margin-right: 20px;
+                margin-bottom: 21px;
             }
             .text {
+                margin-left: 20px;
+                margin-bottom: 21px;
                 white-space: nowrap;
                 overflow: hidden;
                 text-overflow: ellipsis;
@@ -253,7 +262,7 @@ h3 {
 }
 
 .footer {
-    background-color: #555;
+    background-color: #333;
     padding: 30px;
     color: #fff;
     &__logo {
