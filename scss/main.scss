@@ -274,29 +274,6 @@ h3 {
         }     
     }
 }
-header.page {
-    &__logo {
-        position: relative;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        align-content: center;
-        height: 50px;    
-    }
-    &__home {
-        position: absolute;
-        z-index: 1;
-        em {
-            font-size: 20px;
-            margin: 16px 0 0 20px; 
-        }                    
-    }    
-}
-
-main.page {   
-    background-color: #000; 
-}
-
 
 .footer {
     background-color: #555;
