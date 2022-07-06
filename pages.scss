@@ -147,8 +147,7 @@ h3 {
                 color: $secondary-color;
                 display: none;
             }
-            .fa-regular {   
-                color: #000;             
+            .fa-regular {                            
                 display: block;                
             }            
             &:hover {
@@ -173,18 +172,20 @@ h3 {
             }
         }        
         position: relative;
-        background-color: rgba(240,240,240);
+        background-color: $grey-light;
         padding: 0 0 100px 0;
         .menu { 
-            animation: fade-in 3s ease-out;           
+            animation: fade-in 3s ease-in-out;           
             &__title {
                 font-size: 12px;
                 text-transform: uppercase;
-                margin: 0 0 0px 30px;
+                margin-left: 30px;
                 line-height: 2;
                 hr {
-                    color: $color-tertiary;
-                    width: 30px;                    
+                    color: transparent;
+                    background-color: $color-tertiary;
+                    width: 30px; 
+                    height: 2px;                   
                     margin: 0;
                 }
             }
@@ -221,7 +222,7 @@ h3 {
                     .menu__green-btn {
                         display: block;
                         margin: 0;                 
-                        animation: fade-in 3s ease-out;
+                        animation: fade-in 3s ease-in-out;
                     }
                 }
             } 
@@ -246,7 +247,7 @@ h3 {
         }
         button {
             position: absolute;
-            width: 230px;
+            width: 200px;
             height: 50px;
             margin-bottom: 20px;
             border-radius: 50px;
@@ -256,7 +257,6 @@ h3 {
             border: 1px solid $secondary-color;
             cursor: pointer;
             left: 70px;
-            bottom: 0;
         }
     }
 }

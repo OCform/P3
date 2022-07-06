@@ -157,7 +157,6 @@ h3 {
   display: none;
 }
 .main .restaurant__heart .fa-regular {
-  color: #000;
   display: block;
 }
 .main .restaurant__heart:hover .fa-solid {
@@ -172,7 +171,7 @@ h3 {
 }
 .main .wrapper-menu {
   position: relative;
-  background-color: rgb(240, 240, 240);
+  background-color: #f5f5f5;
   padding: 0 0 100px 0;
 }
 @keyframes fade-in {
@@ -184,18 +183,20 @@ h3 {
   }
 }
 .main .wrapper-menu .menu {
-  -webkit-animation: fade-in 3s ease-out;
-          animation: fade-in 3s ease-out;
+  -webkit-animation: fade-in 3s ease-in-out;
+          animation: fade-in 3s ease-in-out;
 }
 .main .wrapper-menu .menu__title {
   font-size: 12px;
   text-transform: uppercase;
-  margin: 0 0 0px 30px;
+  margin-left: 30px;
   line-height: 2;
 }
 .main .wrapper-menu .menu__title hr {
-  color: #99E2D0;
+  color: transparent;
+  background-color: #99E2D0;
   width: 30px;
+  height: 2px;
   margin: 0;
 }
 .main .wrapper-menu .menu__btn {
@@ -233,8 +234,8 @@ h3 {
 .main .wrapper-menu .menu__btn a:hover .menu__green-btn {
   display: block;
   margin: 0;
-  -webkit-animation: fade-in 3s ease-out;
-          animation: fade-in 3s ease-out;
+  -webkit-animation: fade-in 3s ease-in-out;
+          animation: fade-in 3s ease-in-out;
 }
 .main .wrapper-menu .menu .price {
   margin-right: 20px;
@@ -256,7 +257,7 @@ h3 {
 }
 .main .wrapper-menu button {
   position: absolute;
-  width: 230px;
+  width: 200px;
   height: 50px;
   margin-bottom: 20px;
   border-radius: 50px;
@@ -266,7 +267,6 @@ h3 {
   border: 1px solid #FF79DA;
   cursor: pointer;
   left: 70px;
-  bottom: 0;
 }
 
 .footer {
