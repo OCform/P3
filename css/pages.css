@@ -259,14 +259,13 @@ h3 {
   position: absolute;
   width: 200px;
   height: 50px;
-  margin-bottom: 20px;
   border-radius: 50px;
   color: #fff;
   font-weight: 700;
   background: linear-gradient(to bottom right, #FF79DA, #9356DC);
   border: 1px solid #FF79DA;
   cursor: pointer;
-  left: 70px;
+  left: 80px;
 }
 
 .footer {
