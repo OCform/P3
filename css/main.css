@@ -67,16 +67,16 @@ h3 {
 }
 
 .main .lds-ohmyfood {
-  position: fixed;
-  left: 45%;
-  top: 31%;
+  position: relative;
+  left: 40%;
+  top: 300px;
   z-index: 1;
 }
 .main .lds-ohmyfood div {
   position: absolute;
   width: 16px;
-  -webkit-animation: lds-ohmyfood 1.2s cubic-bezier(0, 0.5, 0.5, 1) 3;
-          animation: lds-ohmyfood 1.2s cubic-bezier(0, 0.5, 0.5, 1) 3;
+  -webkit-animation: lds-ohmyfood 1.2s cubic-bezier(0, 0.5, 0.5, 1) infinite;
+          animation: lds-ohmyfood 1.2s cubic-bezier(0, 0.5, 0.5, 1) infinite;
 }
 .main .lds-ohmyfood div:nth-child(1) {
   background-color: #99E2D0;
