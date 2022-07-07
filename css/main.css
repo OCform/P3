@@ -66,6 +66,56 @@ h3 {
   align-content: center;
 }
 
+.main .lds-ohmyfood {
+  position: fixed;
+  left: 45%;
+  top: 31%;
+  z-index: 1;
+}
+.main .lds-ohmyfood div {
+  position: absolute;
+  width: 16px;
+  -webkit-animation: lds-ohmyfood 1.2s cubic-bezier(0, 0.5, 0.5, 1) 3;
+          animation: lds-ohmyfood 1.2s cubic-bezier(0, 0.5, 0.5, 1) 3;
+}
+.main .lds-ohmyfood div:nth-child(1) {
+  background-color: #99E2D0;
+  left: 8px;
+  -webkit-animation-delay: -0.24s;
+          animation-delay: -0.24s;
+}
+.main .lds-ohmyfood div:nth-child(2) {
+  background-color: #FF79DA;
+  left: 32px;
+  -webkit-animation-delay: -0.12s;
+          animation-delay: -0.12s;
+}
+.main .lds-ohmyfood div:nth-child(3) {
+  background-color: #9356DC;
+  left: 56px;
+  -webkit-animation-delay: 0;
+          animation-delay: 0;
+}
+@-webkit-keyframes lds-ohmyfood {
+  0% {
+    top: 8px;
+    height: 64px;
+  }
+  100% {
+    top: 24px;
+    height: 32px;
+  }
+}
+@keyframes lds-ohmyfood {
+  0% {
+    top: 8px;
+    height: 64px;
+  }
+  100% {
+    top: 24px;
+    height: 32px;
+  }
+}
 .main__form {
   padding: 10px;
   display: flex;
@@ -280,7 +330,7 @@ h3 {
 }
 
 .footer {
-  background-color: #555;
+  background-color: #333;
   padding: 30px;
   color: #fff;
 }
@@ -346,7 +396,7 @@ h3 {
   .main__title button {
     width: 230px;
     height: 50px;
-    margin-bottom: 20px;
+    margin-bottom: 0px;
     border-radius: 50px;
     color: #fff;
     font-weight: 700;
@@ -356,7 +406,6 @@ h3 {
   }
   .main .fonctionnement {
     margin-bottom: 50px;
-    padding: 30px 0;
   }
   .main .fonctionnement__title {
     margin: 0 0 30px 20px;
@@ -536,7 +585,7 @@ h3 {
 
   footer {
     width: 100%;
-    background-color: #555;
+    background-color: #333;
   }
   footer .footer {
     padding: 30px;
@@ -618,7 +667,7 @@ h3 {
   }
   .main .fonctionnement {
     margin-bottom: 50px;
-    padding: 30px 0;
+    padding: 0px 0;
   }
   .main .fonctionnement__title {
     margin: 0 0 30px 20px;
@@ -801,7 +850,7 @@ h3 {
 
   footer {
     width: 100%;
-    background-color: #555;
+    background-color: #333;
   }
   footer .footer {
     padding: 30px;

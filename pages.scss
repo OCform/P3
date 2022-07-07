@@ -1,7 +1,8 @@
 $primary-color: #9356DC;
 $secondary-color: #FF79DA;
-$color-tertiary: #99E2D0;
+$tertiary-color: #99E2D0;
 $grey-light: #f5f5f5;
+$grey-dark: #333;
 
 html {
     box-sizing: border-box;
@@ -80,6 +81,12 @@ h3 {
             font-size: 20px;
             margin: 0; 
             
+        }
+        .fa-arrow-left {
+            display: initial;
+        } 
+        .fa-home {
+            display: none;
         }                    
     }    
     
@@ -183,7 +190,7 @@ h3 {
                 line-height: 2;
                 hr {
                     color: transparent;
-                    background-color: $color-tertiary;
+                    background-color: $tertiary-color;
                     width: 30px; 
                     height: 2px;                   
                     margin: 0;
@@ -240,7 +247,7 @@ h3 {
             &__green-btn {                
                 display: none;
                 color: #fff;
-                background-color: $color-tertiary;
+                background-color: $tertiary-color;
                 padding: 31px 20px;
                 border-radius: 0 20px 20px 0;
             }       
@@ -261,7 +268,7 @@ h3 {
 }
 
 .footer {
-    background-color: #333;
+    background-color: $grey-dark;
     padding: 30px;
     color: #fff;
     &__logo {
@@ -275,6 +282,492 @@ h3 {
         line-height: 1.5;
         .fa-solid {
             margin-right: 10px;
+        }
+    }
+}
+
+@media screen and (min-width: 768px) and (max-width:991px) {
+    .container {
+        width: 768px;
+        margin: 0 auto;
+    }    
+    .header {
+        &__logo {
+            position: relative;
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            align-content: center;
+            height: 100px;    
+        }    
+        &__logo img {
+            width: 50%;
+            margin-left: 90px;
+            display: flex;
+            justify-content: flex-start;
+            align-items: flex-start;
+            align-content: flex-start;
+        }
+        &__home {
+            position: absolute;
+            left: 20px;
+            z-index: 1;
+            em {            
+                font-size: 38px;
+                margin: 0; 
+                
+            } 
+            .fa-arrow-left {
+                display: none;
+            } 
+            .fa-home {
+                display: initial;
+            }                  
+        }    
+        
+    }
+    
+    .main {    
+        .restaurant {
+            padding-bottom: 50px;
+            &__title {
+                margin-left: 10px;
+                margin-bottom: 20px;
+                font-family: 'Shrikhand', cursive;
+                font-size: 16px;
+            }
+            &__card {
+                position: relative;
+                vertical-align: middle;           
+                margin: auto;
+                width: 100%;
+                height: 100%;
+                box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+                transition: 0.3s;
+                &:hover {
+                    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+                }
+            }
+            img {            
+                width: 100%;
+                height: 500px;
+                object-fit: cover;
+            }
+            &__container {
+                position: absolute;
+                width: 100%;
+                top: 460px;            
+                padding: 20px 15px;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                background-color: $grey-light;
+                margin: 0px;
+                border-radius: 25px 25px 0 0;
+            }
+            &__heart { 
+                font-size: 28px;
+                margin-right: 10px;
+                margin-bottom: 28px;
+                @keyframes fade-out {
+                    from {
+                        opacity: 1;
+                    }        
+                    to {
+                        opacity: 0;
+                    }
+                }
+                @keyframes fade-in {
+                    from {
+                        opacity: 0;
+                    }        
+                    to {
+                        opacity: 1;
+                    }
+                }
+                .fa-solid {  
+                    color: $secondary-color;
+                    display: none;
+                }
+                .fa-regular {                            
+                    display: block;                
+                }            
+                &:hover {
+                    .fa-solid {
+                        display: block;
+                        animation: fade-in 3s ease-out;                    
+                    }
+                    .fa-regular {
+                        animation: fade-out 3s ease-in; 
+                        display: none;
+                    }
+                }
+            }     
+        }
+        .wrapper-menu { 
+            @keyframes fade-in {
+                from {
+                    opacity: 0;
+                }        
+                to {
+                    opacity: 1;
+                }
+            }                
+            position: relative;
+            background-color: $grey-light;            
+            .menu { 
+                animation: fade-in 3s ease-in-out;           
+                &__title {
+                    font-size: 14px;
+                    text-transform: uppercase;
+                    margin-left: 140px;
+                    line-height: 2;
+                    hr {
+                        color: transparent;
+                        background-color: $tertiary-color;
+                        width: 40px; 
+                        height: 2px;                   
+                        margin: 0;
+                    }
+                }
+                &__btn {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    flex-direction: column;
+                    gap: 30px;
+                    margin-top: 10px;
+                    margin-bottom: 50px;
+                }
+                &__btn a {              
+                    width: 500px;
+                    height: 80px;
+                    background-color: #fff;  
+                    border-radius: 20px;     
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: flex-end;
+                    flex-wrap: nowrap;
+                    transition: 0.5s;
+                    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+                    .text {
+                        font-size: 16px;
+                        line-height: 1.5;
+                    }
+                    .weight {
+                        font-size: 18px;
+                        font-weight: 700;
+                    }               
+                    &:hover {                    
+                        box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+                        .menu__green-btn {
+                            display: block;
+                            margin: 0;                 
+                            animation: fade-in 3s ease-in-out;
+                        }
+                    }
+                } 
+                .price {
+                    margin-right: 20px;
+                    margin-bottom: 21px;
+                }
+                .text {
+                    margin-left: 20px;
+                    margin-bottom: 21px;
+                    white-space: nowrap;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                }
+                &__green-btn {                
+                    display: none;
+                    color: #fff;
+                    background-color: $tertiary-color;
+                    
+                    padding: 31px 110px;
+                    border-radius: 0 20px 20px 0;
+                }       
+            }
+            button {
+                position: absolute;
+                width: 200px;
+                height: 50px;            
+                border-radius: 50px;
+                color: #fff;
+                font-weight: 700;
+                background: linear-gradient(to bottom right, $secondary-color, $primary-color);
+                border: 1px solid $secondary-color;
+                cursor: pointer;
+                left: 135px;
+            }
+        }
+    }
+    footer {
+        width: 100%;
+        background-color: $grey-dark;        
+        .footer {
+            padding: 30px;
+            color: #fff;            
+            &__logo {
+                margin-bottom: 10px;
+                img {
+                    width: 30%;
+                }
+            }
+            &__navigation ul {
+                display: flex;
+                justify-content: space-between;
+            }
+            &__navigation a {
+                color: #fff;
+                line-height: 1.5;
+                .fa-solid {
+                    margin-right: 10px;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 992px) {
+    .container {
+        width: 992px;
+        margin: 0 auto;
+    }    
+    .header {
+        &__logo {
+            position: relative;
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            align-content: center;
+            height: 100px;    
+        }    
+        &__logo img {
+            width: 40%;  
+            margin-left: 100px;          
+        }
+        &__home {
+            position: absolute;
+            left: 20px;
+            z-index: 1;
+            em {            
+                font-size: 40px;
+                margin: 0; 
+                
+            } 
+            .fa-arrow-left {
+                display: none;
+            }
+            .fa-home {
+                display: initial;
+            }                   
+        }    
+        
+    }
+    
+    .main {    
+        .restaurant {
+            padding-bottom: 50px;
+            &__title {
+                margin-left: 10px;
+                margin-bottom: 20px;
+                font-family: 'Shrikhand', cursive;
+                font-size: 16px;
+            }
+            &__card {
+                position: relative;
+                vertical-align: middle;           
+                margin: auto;
+                width: 100%;
+                height: 100%;
+                box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+                transition: 0.3s;
+                &:hover {
+                    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+                }
+            }
+            img {            
+                width: 100%;
+                height: 600px;
+                object-fit: cover;
+            }
+            &__container {
+                position: absolute;
+                width: 100%;
+                top: 570px;            
+                padding: 20px 15px;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                background-color: $grey-light;
+                margin: 0px;
+                border-radius: 25px 25px 0 0;
+            }
+            &__heart { 
+                font-size: 40px;
+                margin-right: 10px;
+                margin-bottom: 28px;
+                @keyframes fade-out {
+                    from {
+                        opacity: 1;
+                    }        
+                    to {
+                        opacity: 0;
+                    }
+                }
+                @keyframes fade-in {
+                    from {
+                        opacity: 0;
+                    }        
+                    to {
+                        opacity: 1;
+                    }
+                }
+                .fa-solid {  
+                    color: $secondary-color;
+                    display: none;
+                }
+                .fa-regular {                            
+                    display: block;                
+                }            
+                &:hover {
+                    .fa-solid {
+                        display: block;
+                        animation: fade-in 3s ease-out;                    
+                    }
+                    .fa-regular {
+                        animation: fade-out 3s ease-in; 
+                        display: none;
+                    }
+                }
+            }     
+        }
+        .wrapper-menu { 
+            @keyframes fade-in {
+                from {
+                    opacity: 0;
+                }        
+                to {
+                    opacity: 1;
+                }
+            }
+            display: flex;  
+            justify-content: space-around;              
+            position: relative;
+            background-color: $grey-light;
+            padding: 30px;
+            padding-bottom: 100px;
+            .menu { 
+                animation: fade-in 3s ease-in-out;           
+                &__title {
+                    font-size: 16px;
+                    text-transform: uppercase;                    
+                    line-height: 2;
+                    margin-left: 20px;
+                    hr {
+                        color: transparent;
+                        background-color: $tertiary-color;
+                        width: 40px; 
+                        height: 2px;                   
+                        margin: 0;
+                    }
+                }
+                &__btn {
+                    display: flex;
+                    justify-content: center;
+                    align-items: flex-start;
+                    align-content: center;
+                    flex-direction: column;
+                    gap: 30px;
+                    margin-top: 10px;
+                    margin-bottom: 50px;
+                }
+                &__btn a {              
+                    width: 300px;
+                    height: 80px;
+                    background-color: #fff;  
+                    border-radius: 20px;     
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: flex-end;
+                    align-content: center;
+                    flex-wrap: nowrap;
+                    transition: 0.5s;
+                    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+                    .text {
+                        font-size: 12px;
+                        line-height: 1.5;
+                    }
+                    .weight {
+                        font-size: 14px;
+                        font-weight: 700;
+                    }               
+                    &:hover {                    
+                        box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+                        .menu__green-btn {
+                            display: block;
+                            margin: 0;                 
+                            animation: fade-in 3s ease-in-out;
+                        }
+                    }
+                } 
+                .price {
+                    margin-right: 20px;
+                    margin-bottom: 21px;
+                }
+                .text {
+                    margin-left: 20px;
+                    margin-bottom: 21px;
+                    white-space: nowrap;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                }
+                &__green-btn {                
+                    display: none;
+                    color: #fff;
+                    background-color: $tertiary-color;
+                    padding: 31px 20px;
+                    border-radius: 0 20px 20px 0;
+                }      
+            }
+            button {
+                position: absolute;
+                width: 200px;
+                height: 50px;            
+                border-radius: 50px;
+                color: #fff;
+                font-weight: 700;
+                background: linear-gradient(to bottom right, $secondary-color, $primary-color);
+                border: 1px solid $secondary-color;
+                cursor: pointer;
+                left: 40px;
+                top: 420px;
+            }
+        }
+    }
+    footer {
+        width: 100%;
+        background-color: $grey-dark;        
+        .footer {
+            padding: 30px;
+            color: #fff;            
+            &__logo {
+                margin-bottom: 10px;
+                img {
+                    width: 30%;
+                }
+            }
+            &__navigation ul {
+                display: flex;
+                justify-content: space-between;
+            }
+            &__navigation a {
+                color: #fff;
+                line-height: 1.5;
+                .fa-solid {
+                    margin-right: 10px;
+                }
+            }
         }
     }
 }
