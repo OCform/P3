@@ -17,6 +17,56 @@ body {
   flex-direction: column;
   justify-content: flex-start;
 }
+body .lds-ohmyfood {
+  position: fixed;
+  left: 46%;
+  top: 0%;
+  z-index: 1;
+}
+body .lds-ohmyfood div {
+  position: absolute;
+  width: 16px;
+  -webkit-animation: lds-ohmyfood 1.2s cubic-bezier(0, 0.5, 0.5, 1) infinite;
+          animation: lds-ohmyfood 1.2s cubic-bezier(0, 0.5, 0.5, 1) infinite;
+}
+body .lds-ohmyfood div:nth-child(1) {
+  background-color: #99E2D0;
+  left: 8px;
+  -webkit-animation-delay: -0.24s;
+          animation-delay: -0.24s;
+}
+body .lds-ohmyfood div:nth-child(2) {
+  background-color: #FF79DA;
+  left: 32px;
+  -webkit-animation-delay: -0.12s;
+          animation-delay: -0.12s;
+}
+body .lds-ohmyfood div:nth-child(3) {
+  background-color: #9356DC;
+  left: 56px;
+  -webkit-animation-delay: 0;
+          animation-delay: 0;
+}
+@-webkit-keyframes lds-ohmyfood {
+  0% {
+    top: 8px;
+    height: 64px;
+  }
+  100% {
+    top: 24px;
+    height: 32px;
+  }
+}
+@keyframes lds-ohmyfood {
+  0% {
+    top: 8px;
+    height: 64px;
+  }
+  100% {
+    top: 24px;
+    height: 32px;
+  }
+}
 
 h1,
 h2,
@@ -66,56 +116,6 @@ h3 {
   align-content: center;
 }
 
-.main .lds-ohmyfood {
-  position: relative;
-  left: 40%;
-  top: 300px;
-  z-index: 1;
-}
-.main .lds-ohmyfood div {
-  position: absolute;
-  width: 16px;
-  -webkit-animation: lds-ohmyfood 1.2s cubic-bezier(0, 0.5, 0.5, 1) infinite;
-          animation: lds-ohmyfood 1.2s cubic-bezier(0, 0.5, 0.5, 1) infinite;
-}
-.main .lds-ohmyfood div:nth-child(1) {
-  background-color: #99E2D0;
-  left: 8px;
-  -webkit-animation-delay: -0.24s;
-          animation-delay: -0.24s;
-}
-.main .lds-ohmyfood div:nth-child(2) {
-  background-color: #FF79DA;
-  left: 32px;
-  -webkit-animation-delay: -0.12s;
-          animation-delay: -0.12s;
-}
-.main .lds-ohmyfood div:nth-child(3) {
-  background-color: #9356DC;
-  left: 56px;
-  -webkit-animation-delay: 0;
-          animation-delay: 0;
-}
-@-webkit-keyframes lds-ohmyfood {
-  0% {
-    top: 8px;
-    height: 64px;
-  }
-  100% {
-    top: 24px;
-    height: 32px;
-  }
-}
-@keyframes lds-ohmyfood {
-  0% {
-    top: 8px;
-    height: 64px;
-  }
-  100% {
-    top: 24px;
-    height: 32px;
-  }
-}
 .main__form {
   padding: 10px;
   display: flex;
