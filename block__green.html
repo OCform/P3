@@ -1,0 +1,64 @@
+<style>
+    18:07
+.wrapper {
+  overflow: hidden;
+  width: 450px;
+}
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+  padding-left: 1em;
+  border: 1px solid lightblue;
+  border-top-left-radius: 8px;
+  border-bottom-left-radius: 8px;
+  width: 450px;
+  height: 80px;
+  transition: 1s all;
+}
+
+.texts {
+    display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: lightgreen;
+  max-width: 370px;
+
+}
+.sub{
+    white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.block {
+  position: absolute;
+  height: 80px;
+  width: 80px;
+  background: red;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  right: -80px;
+  opacity: 0.5;
+    border-top-right-radius: 8px;
+  border-bottom-right-radius: 8px;
+}
+
+.container:hover {
+  width: 350px;
+}
+
+</style>
+
+<div class="wrapper">
+    <div class="container">
+        <div class="title">Fondue escargot</div>
+       <div class="texts">
+         <div class="sub">Escargot, sauce à l'ail slkjdfh l sglk lskfjh lskfgh </div>
+         <div class="price">24€</div>
+      </div>
+      <div class="block">X</div>
+    </div>
+    <div>

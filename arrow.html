@@ -1,0 +1,53 @@
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous"/>
+<style>    
+.arrow {
+width: 30px;
+border: 1px solid blue;
+overflow: hidden;
+margin-left: 50px;
+}
+i.fa {
+font-size:50px;
+-webkit-transition-duration: 1s;
+-webkit-transform: translateX(-31px);
+}
+.arrow:hover i {
+-webkit-transition-duration: 500ms;
+-webkit-transform: translateX(30px);
+}
+
+
+.arrow i {
+    /* animate initial appearance and whenever state returns to normal from :hover */
+    animation:  translate-left-in 0.3s 1 cubic-bezier (0.7, 0, 0.3, 1);
+}
+.arrow:hover i {
+    /* animate on hover */
+    animation:  translate-left-in 0.3s 1 cubic-bezier (0.7, 0, 0.3, 1);
+    /* Keep the state after the animation has finished */
+    transform: translateX(30px);
+}
+    /* Keyframes */
+    @keyframes translate-left-in {
+        0% { transform: translateX(-30px); } 
+        100% { transform: translateX(0); }
+    }
+    translate-left-in {@keyframes
+    { : (- ); }0% transform translateX 30px
+    { : ( ); }100% transform translateX 0
+    }
+    translate-left-out {
+    { -webkit- : ( ); }0% transform translateX 0%
+    { -webkit- : ( ); }100% transform translateX 30px
+    }
+    translate-left-out {@keyframes
+    { : ( ); }0% transform translateX 0%
+    { : ( ); }100% transform translateX 30px
+    }
+
+
+</style>
+<div class="arrow">
+    <i class="fa fa-angle-right"> </i>
+</div>
+
