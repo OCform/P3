@@ -165,7 +165,7 @@ h3 {
 .main .restaurant__title {
   margin-left: 10px;
   font-family: "Shrikhand", cursive;
-  font-size: 12px;
+  font-size: 14px;
 }
 .main .restaurant__card {
   position: relative;
@@ -314,11 +314,15 @@ h3 {
   padding: 0 4px;
 }
 .main .wrapper-menu .menu__title {
-  font-size: 12px;
-  text-transform: uppercase;
-  text-align: left;
   margin-top: 30px;
+  margin-left: 20px;
+}
+.main .wrapper-menu .menu__title h2 {
+  font-size: 12px;
+  font-weight: 400;
+  text-transform: uppercase;
   line-height: 2;
+  text-align: left;
 }
 .main .wrapper-menu .menu__title hr {
   color: transparent;
@@ -330,13 +334,6 @@ h3 {
 .main .wrapper-menu .menu__btn {
   -webkit-animation: slide-bottom-top 3s ease-in-out;
           animation: slide-bottom-top 3s ease-in-out;
-  /*display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  gap: 30px;
-  margin-top: 10px;
-  margin-bottom: 50px;*/
 }
 .main .wrapper-menu .menu__btn a {
   margin-top: 8px;
@@ -517,7 +514,7 @@ h3 {
   .main .restaurant__title {
     margin-left: 10px;
     font-family: "Shrikhand", cursive;
-    font-size: 16px;
+    font-size: 20px;
   }
   .main .restaurant__card {
     position: relative;
@@ -805,7 +802,7 @@ h3 {
   .main .restaurant__title {
     margin-left: 10px;
     font-family: "Shrikhand", cursive;
-    font-size: 18px;
+    font-size: 22px;
   }
   .main .restaurant__card {
     position: relative;
