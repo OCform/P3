@@ -1,0 +1,227 @@
+.main {    
+    .restaurant {
+        padding-bottom: 50px;
+        &__title {
+            margin-left: 10px;
+            font-family: 'Shrikhand', cursive;
+            font-size: 12px;
+        }
+        &__card {
+            position: relative;
+            vertical-align: middle;           
+            margin: auto;
+            width: 100%;
+            height: 100%;
+            box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+            transition: 0.3s;
+            &:hover {
+                box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+            }
+        }
+        img {            
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+        &__container {
+            position: absolute;
+            width: 100%;
+            top: 176px;            
+            padding: 25px 15px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background-color: $grey-light;
+            margin: 0px;
+            border-radius: 25px 25px 0 0;
+        }
+        &__heart { 
+            font-size: 28px;
+            margin-right: 10px;
+            //margin-bottom: 28px;
+            @keyframes fade-in {
+                from {
+                    opacity: 0;
+                }        
+                to {
+                    opacity: 1;
+                }
+            }
+            .fa-solid {  
+                color: $secondary-color;
+                display: none;
+            }
+            .fa-regular {                            
+                display: block;
+                color: #bbb;                
+            }            
+            &:hover {
+                .fa-solid {
+                    display: block;
+                    animation: fade-in 3s ease-in-out;                    
+                }
+                .fa-regular {
+                    display: none;
+                }
+            }
+        }     
+    }
+    .wrapper-menu { 
+        display: -ms-flexbox; /* IE10 */
+        display: flex;
+        -ms-flex-wrap: wrap; /* IE10 */
+        flex-wrap: wrap;
+        padding: 0 4px;
+        @keyframes slide-bottom-top {
+            0% {
+                transform: translateY(100%);
+                opacity: 0;
+            }
+            100% {
+                transform: translateY(0%);  
+                opacity: 1;                                           
+            }
+        }
+        @keyframes rotate-360 {            
+            0% {
+                transform: rotate(0deg);
+            }
+            100% {
+                transform: rotate(360deg);                                             
+            }
+        }
+        @keyframes slide-in {
+            0% {
+                width: 0;
+            }
+            100% {
+                width: 80px;                                             
+            }
+        }
+        @keyframes slide-out {
+            0% {
+                width: 80px;
+            }
+            100% {
+                width: 0;
+            }
+        }      
+        //position: relative;
+        background-color: $grey-light;
+        padding-bottom: 30px;
+        .menu {
+            -ms-flex: 100%;
+            flex: 100%;
+            max-width: 100%; 
+            padding: 0 4px;                      
+            &__title {
+                font-size: 12px;
+                text-transform: uppercase;
+                text-align: left;
+                margin-top: 30px;
+                //margin-left: 20px;
+                line-height: 2;
+                hr {
+                    color: transparent;
+                    background-color: $tertiary-color;
+                    width: 30px; 
+                    height: 2px;                   
+                    margin: 0;
+                }
+            }
+            &__btn {
+                //padding: 0 20px;
+                animation: slide-bottom-top 3s ease-in-out;
+                /*display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-direction: column;
+                gap: 30px;
+                margin-top: 10px;
+                margin-bottom: 50px;*/
+            }
+            &__btn a { 
+                margin-top: 8px;
+                vertical-align: middle;
+                width: 100%;                           
+                //width: 320px;
+                height: 80px;
+                background-color: #fff;  
+                border-radius: 20px;     
+                display: flex;
+                justify-content: space-between;
+                align-items: flex-end;
+                flex-wrap: nowrap;
+                transition: 0.5s;
+                box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+                .text {
+                    font-size: 14px;
+                    line-height: 1.5;
+                }
+                .weight {
+                    font-size: 16px;
+                    font-weight: 700;
+                }               
+                &:hover {                    
+                    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+                    .menu__green-btn {                        
+                        height: 80px;
+                        width: 80px;     
+                        right: 0; 
+                        left: 100%; 
+                        animation: slide-in .3s ease-in-out;                        
+                    }
+                    .menu__green-btn em {
+                        animation: rotate-360 1s;
+                    }
+                }
+            } 
+            .wrapper-text {
+                display: flex;
+                align-items: flex-end;
+                justify-content: space-between;
+                width: 100%;
+                white-space: nowrap;
+                overflow: hidden;
+                text-overflow: ellipsis;
+            }
+            .price {
+                margin-right: 20px;
+                margin-bottom: 21px;
+            }
+            .text {
+                margin-left: 20px;
+                margin-bottom: 21px;
+                white-space: nowrap;
+                overflow: hidden;
+                text-overflow: ellipsis;
+            }
+            &__green-btn {
+                display: flex;
+                justify-content: center;
+                align-items: center;   
+                overflow: hidden;                                  
+                width: 0;
+                height: 80px;                               
+                font-size: 30px;
+                color: #fff;
+                background-color: $tertiary-color;                
+                border-radius: 0 20px 20px 0; 
+                animation: slide-out .5s ease-in-out;
+            }       
+        }
+        button {
+            width: 200px;
+            height: 50px;            
+            border-radius: 50px;
+            color: #fff;
+            font-weight: 700;
+            background: linear-gradient(to bottom right, $secondary-color, $primary-color);
+            border: 1px solid $secondary-color;
+            cursor: pointer;            
+        }
+    }
+    &__btn {
+        margin: 50px auto;
+    }
+}
