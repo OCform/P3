@@ -65,7 +65,7 @@ h3 {
 
 .main__form {
   min-width: 375px;
-  height: 40px;
+  height: 50px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -76,8 +76,9 @@ h3 {
   margin-left: 20px;
 }
 .main__form .placeholder {
+  margin-left: 10px;
   color: #000;
-  height: 100%;
+  height: 40px;
   background-color: transparent;
   border-color: transparent;
 }
@@ -160,7 +161,8 @@ h3 {
   font-size: 20px;
   font-weight: 900;
   top: 25px;
-  left: -12px;
+  right: 100%;
+  left: -15px;
   padding-top: 4px;
   padding-right: 2px;
 }
@@ -242,48 +244,15 @@ h3 {
 }
 .restaurants__heart {
   font-size: 28px;
-  /*@keyframes fade-out {
-      0% {
-          opacity: 1;
-      }        
-      100% {
-          opacity: 0;
-      }
-  }
-  @keyframes fade-in {
-      0% {
-          opacity: 0;
-      }        
-      100% {
-          opacity: 1;
-      }
-  }
-  .fa-solid {  
-      color: $secondary-color;
-      display: none;
-  }
-  .fa-regular {                         
-      display: block;                
-  }            
-  &:hover {
-      .fa-solid {
-          display: block;
-          animation: fade-in 3s ease-out;                    
-      }
-      .fa-regular {
-          animation: fade-out 3s ease-in; 
-          display: none;
-      }
-  }*/
 }
 .restaurants__heart .fa-heart path {
-  color: #fff;
+  fill: #fff;
   stroke: #000;
-  stroke-width: 5px;
-  transition: color 3s ease-out;
+  stroke-width: 10px;
+  transition: fill 3s ease-out;
 }
 .restaurants__heart .fa-heart path:hover {
-  color: #FF79DA;
+  fill: #FF79DA;
   stroke: #FF79DA;
 }
 
@@ -301,25 +270,14 @@ h3 {
   color: #fff;
   line-height: 1.5;
 }
-.footer__navigation a .fa-solid {
+.footer__navigation a .fa-utensils,
+.footer__navigation a .fa-handshake-angle {
   margin-right: 10px;
 }
-.footer {
-  background-color: #333;
-  padding: 30px;
-}
-.footer__logo {
-  margin-bottom: 10px;
-}
-.footer__logo img {
-  width: 150px;
-}
-.footer__navigation a {
-  color: #fff;
-  line-height: 1.5;
-}
-.footer__navigation a .fa-solid {
-  margin-right: 10px;
+.footer__navigation ul {
+  font-size: 18px;
+  display: flex;
+  flex-direction: column;
 }
 
 @media screen and (min-width: 768px) {
@@ -330,8 +288,10 @@ h3 {
     width: 250px;
   }
   .footer__navigation ul {
+    font-size: 20px;
     display: flex;
     justify-content: space-between;
+    flex-direction: row;
   }
 }
 @media screen and (min-width: 992px) {
@@ -346,7 +306,7 @@ h3 {
     width: 300px;
   }
   .footer__navigation ul {
-    font-size: 20px;
+    font-size: 25px;
   }
 }
 @media screen and (min-width: 768px) {

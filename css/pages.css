@@ -96,17 +96,10 @@ h3 {
 .header__home {
   position: absolute;
   left: 20px;
-  z-index: 1;
-}
-.header__home em {
-  font-size: 20px;
-  margin: 0;
 }
 .header__home .fa-arrow-left {
-  display: initial;
-}
-.header__home .fa-home {
-  display: none;
+  font-size: 20px;
+  margin: 0;
 }
 
 .main .restaurant {
@@ -150,41 +143,15 @@ h3 {
 .main .restaurant__heart {
   font-size: 28px;
   margin-right: 10px;
-  /*margin-bottom: 28px;
-  @keyframes fade-in {
-      from {
-          opacity: 0;
-      }        
-      to {
-          opacity: 1;
-      }
-  }
-  .fa-solid {  
-      color: $secondary-color;
-      display: none;
-  }
-  .fa-regular {                            
-      display: block;
-      color: #bbb;                
-  }            
-  &:hover {
-      .fa-solid {
-          display: block;
-          animation: fade-in 3s ease-in-out;                    
-      }
-      .fa-regular {
-          display: none;
-      }
-  }*/
 }
 .main .restaurant__heart .fa-heart path {
-  color: #f1f1f1;
+  fill: #f1f1f1;
   stroke: #000;
-  stroke-width: 5px;
-  transition: color 3s ease-out;
+  stroke-width: 10px;
+  transition: fill 3s ease-out;
 }
 .main .restaurant__heart .fa-heart path:hover {
-  color: #FF79DA;
+  fill: #FF79DA;
   stroke: #FF79DA;
 }
 .main .wrapper-menu { /* IE10 */
@@ -232,7 +199,7 @@ h3 {
 }
 @-webkit-keyframes slide-in {
   0% {
-    width: 0;
+    width: 10px;
   }
   50% {
     width: 40px;
@@ -243,7 +210,7 @@ h3 {
 }
 @keyframes slide-in {
   0% {
-    width: 0;
+    width: 10px;
   }
   50% {
     width: 40px;
@@ -257,10 +224,10 @@ h3 {
     width: 80px;
   }
   50% {
-    width: 20px;
+    width: 40px;
   }
   100% {
-    width: 0;
+    width: 10px;
   }
 }
 @keyframes slide-out {
@@ -268,10 +235,10 @@ h3 {
     width: 80px;
   }
   50% {
-    width: 20px;
+    width: 40px;
   }
   100% {
-    width: 0;
+    width: 10px;
   }
 }
 .main .wrapper-menu .menu {
@@ -293,6 +260,7 @@ h3 {
   text-align: left;
 }
 .main .wrapper-menu .menu__title hr {
+  border-color: transparent;
   color: transparent;
   background-color: #99E2D0;
   width: 30px;
@@ -305,7 +273,7 @@ h3 {
   width: 100%;
   height: 80px;
   background-color: #fff;
-  border-radius: 20px;
+  border-radius: 10px;
   display: flex;
   justify-content: space-between;
   align-items: flex-end;
@@ -327,12 +295,12 @@ h3 {
 .main .wrapper-menu .menu__btn a:hover .menu__green-btn {
   height: 80px;
   width: 80px;
-  -webkit-animation: slide-in 1s ease-out;
-          animation: slide-in 1s ease-out;
+  -webkit-animation: slide-in 0.4s ease-in;
+          animation: slide-in 0.4s ease-in;
 }
-.main .wrapper-menu .menu__btn a:hover .menu__green-btn em {
-  -webkit-animation: rotate-360 1s;
-          animation: rotate-360 1s;
+.main .wrapper-menu .menu__btn a:hover .menu__green-btn .fa-circle-check {
+  -webkit-animation: rotate-360 1s ease-in-out;
+          animation: rotate-360 1s ease-in-out;
 }
 .main .wrapper-menu .menu .wrapper-text {
   display: flex;
@@ -355,18 +323,18 @@ h3 {
   text-overflow: ellipsis;
 }
 .main .wrapper-menu .menu__green-btn {
+  overflow: hidden;
   display: flex;
   justify-content: center;
   align-items: center;
-  overflow: hidden;
   width: 0;
   height: 100%;
   font-size: 30px;
   color: #fff;
   background-color: #99E2D0;
-  border-radius: 0 20px 20px 0;
-  -webkit-animation: slide-out 0.5s ease-out;
-          animation: slide-out 0.5s ease-out;
+  border-radius: 0 10px 10px 0;
+  -webkit-animation: slide-out 0.4s ease-out;
+          animation: slide-out 0.4s ease-out;
 }
 .main .wrapper-menu button {
   width: 200px;
@@ -396,25 +364,14 @@ h3 {
   color: #fff;
   line-height: 1.5;
 }
-.footer__navigation a .fa-solid {
+.footer__navigation a .fa-utensils,
+.footer__navigation a .fa-handshake-angle {
   margin-right: 10px;
 }
-.footer {
-  background-color: #333;
-  padding: 30px;
-}
-.footer__logo {
-  margin-bottom: 10px;
-}
-.footer__logo img {
-  width: 150px;
-}
-.footer__navigation a {
-  color: #fff;
-  line-height: 1.5;
-}
-.footer__navigation a .fa-solid {
-  margin-right: 10px;
+.footer__navigation ul {
+  font-size: 18px;
+  display: flex;
+  flex-direction: column;
 }
 
 @media screen and (min-width: 768px) {
@@ -425,8 +382,10 @@ h3 {
     width: 250px;
   }
   .footer__navigation ul {
+    font-size: 20px;
     display: flex;
     justify-content: space-between;
+    flex-direction: row;
   }
 }
 @media screen and (min-width: 992px) {
@@ -441,7 +400,7 @@ h3 {
     width: 300px;
   }
   .footer__navigation ul {
-    font-size: 20px;
+    font-size: 25px;
   }
 }
 @media screen and (min-width: 768px) {
@@ -458,17 +417,10 @@ h3 {
   .header__home {
     position: absolute;
     left: 20px;
-    z-index: 1;
-  }
-  .header__home em {
-    font-size: 30px;
-    margin: 0;
   }
   .header__home .fa-arrow-left {
-    display: none;
-  }
-  .header__home .fa-home {
-    display: initial;
+    font-size: 30px;
+    margin: 0;
   }
   .main .restaurant {
     padding-bottom: 50px;
@@ -744,17 +696,10 @@ h3 {
   .header__home {
     position: absolute;
     left: 20px;
-    z-index: 1;
-  }
-  .header__home em {
-    font-size: 40px;
-    margin: 0;
   }
   .header__home .fa-arrow-left {
-    display: none;
-  }
-  .header__home .fa-home {
-    display: initial;
+    font-size: 40px;
+    margin: 0;
   }
   .main .restaurant {
     max-width: 1440px;

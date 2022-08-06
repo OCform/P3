@@ -39,42 +39,15 @@
             font-size: 28px;
             margin-right: 10px;
             .fa-heart path {
-                color: $grey-light;
+                fill: $grey-light;
                 stroke: #000;
-                stroke-width: 5px;
-                transition: color 3s ease-out;
+                stroke-width: 10px;
+                transition: fill 3s ease-out;
             }
             .fa-heart path:hover {
-                color: $secondary-color;
+                fill: $secondary-color;
                 stroke: $secondary-color;
             }
-            /*margin-bottom: 28px;
-            @keyframes fade-in {
-                from {
-                    opacity: 0;
-                }        
-                to {
-                    opacity: 1;
-                }
-            }
-            .fa-solid {  
-                color: $secondary-color;
-                display: none;
-            }
-            .fa-regular {                            
-                display: block;
-                color: #bbb;                
-            }            
-            &:hover {
-                .fa-solid {
-                    display: block;
-                    animation: fade-in 3s ease-in-out;                    
-                }
-                .fa-regular {
-                    display: none;
-                }
-            }*/
-            
         }     
     }
     .wrapper-menu { 
@@ -103,7 +76,7 @@
         }
         @keyframes slide-in {
             0% {
-                width: 0;
+                width: 10px;
             }
             50% {
                 width: 40px;                                           
@@ -117,10 +90,10 @@
                 width: 80px;
             }
             50% {
-                width: 20px;                                           
+                width: 40px;                                           
             }
             100% {
-                width: 0;                                           
+                width: 10px;                                           
             }
         }
         background-color: $grey-light;
@@ -142,6 +115,7 @@
                     text-align: left;
                 }
                 hr {
+                    border-color: transparent;
                     color: transparent;
                     background-color: $tertiary-color;
                     width: 30px; 
@@ -150,15 +124,13 @@
                 }
             }
             &__btn {
-                
-            }
-            &__btn a { 
+                a { 
                 margin-top: 8px;
                 vertical-align: middle;
                 width: 100%;
                 height: 80px;
                 background-color: #fff;  
-                border-radius: 20px;     
+                border-radius: 10px;     
                 display: flex;
                 justify-content: space-between;
                 align-items: flex-end;
@@ -178,13 +150,14 @@
                     .menu__green-btn {                        
                         height: 80px;
                         width: 80px;
-                        animation: slide-in 1s ease-out;                                               
-                    }
-                    .menu__green-btn em {
-                        animation: rotate-360 1s;
+                        animation: slide-in .4s ease-in;
+                        .fa-circle-check {
+                            animation: rotate-360 1s ease-in-out;
+                        }                                          
                     }
                 }
             } 
+        }
             .wrapper-text {
                 display: flex;
                 align-items: flex-end;
@@ -206,17 +179,17 @@
                 text-overflow: ellipsis;
             }
             &__green-btn {
+                overflow: hidden;
                 display: flex;
                 justify-content: center;
-                align-items: center;   
-                overflow: hidden;                                  
+                align-items: center;
                 width: 0;
                 height: 100%;                               
                 font-size: 30px;
                 color: #fff;
                 background-color: $tertiary-color;                
-                border-radius: 0 20px 20px 0; 
-                animation: slide-out .5s ease-out;
+                border-radius: 0 10px 10px 0; 
+                animation: slide-out .4s ease-out;
             }       
         }
         button {

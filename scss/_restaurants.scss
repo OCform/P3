@@ -67,49 +67,15 @@
         }        
     }
     &__heart { 
-        font-size: 28px; 
-        //color: #999;       
-        /*@keyframes fade-out {
-            0% {
-                opacity: 1;
-            }        
-            100% {
-                opacity: 0;
-            }
-        }
-        @keyframes fade-in {
-            0% {
-                opacity: 0;
-            }        
-            100% {
-                opacity: 1;
-            }
-        }
-        .fa-solid {  
-            color: $secondary-color;
-            display: none;
-        }
-        .fa-regular {                         
-            display: block;                
-        }            
-        &:hover {
-            .fa-solid {
-                display: block;
-                animation: fade-in 3s ease-out;                    
-            }
-            .fa-regular {
-                animation: fade-out 3s ease-in; 
-                display: none;
-            }
-        }*/
+        font-size: 28px;
         .fa-heart path {
-            color: #fff;
+            fill: #fff;
             stroke: #000;
-            stroke-width: 5px;
-            transition: color 3s ease-out;
+            stroke-width: 10px;
+            transition: fill 3s ease-out;
         }
         .fa-heart path:hover {
-            color: $secondary-color;
+            fill: $secondary-color;
             stroke: $secondary-color;
         }
     }

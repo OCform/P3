@@ -13,17 +13,11 @@
         &__home {
             position: absolute;
             left: 20px;
-            z-index: 1;
-            em {            
+            //z-index: 1;
+            .fa-arrow-left {            
                 font-size: 30px;
                 margin: 0;                 
-            }
-            .fa-arrow-left {
-                display: none;
-            } 
-            .fa-home {
-                display: initial;
-            }                    
+            }                             
         }
     }
 
@@ -256,18 +250,12 @@
         &__home {
             position: absolute;
             left: 20px;
-            z-index: 1;
-            em {            
+            //z-index: 1;
+            .fa-arrow-left {            
                 font-size: 40px;
                 margin: 0; 
                 
-            }
-            .fa-arrow-left {
-                display: none;
-            } 
-            .fa-home {
-                display: initial;
-            }                    
+            }                                
         }
     }
     .main {    
