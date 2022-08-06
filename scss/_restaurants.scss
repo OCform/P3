@@ -1,4 +1,4 @@
-
+@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/js/all.min.js");
 .restaurants {
     background-color: $grey-light;
     padding: 50px 10px;    
@@ -68,8 +68,8 @@
     }
     &__heart { 
         font-size: 28px; 
-        color: #999;       
-        @keyframes fade-out {
+        //color: #999;       
+        /*@keyframes fade-out {
             0% {
                 opacity: 1;
             }        
@@ -101,6 +101,16 @@
                 animation: fade-out 3s ease-in; 
                 display: none;
             }
+        }*/
+        .fa-heart path {
+            color: #fff;
+            stroke: #000;
+            stroke-width: 5px;
+            transition: color 3s ease-out;
+        }
+        .fa-heart path:hover {
+            color: $secondary-color;
+            stroke: $secondary-color;
         }
     }
 }

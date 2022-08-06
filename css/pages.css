@@ -18,56 +18,6 @@ body {
   flex-direction: column;
   justify-content: flex-start;
 }
-body .lds-ohmyfood {
-  position: fixed;
-  left: 46%;
-  top: 0%;
-  z-index: 1;
-}
-body .lds-ohmyfood div {
-  position: absolute;
-  width: 16px;
-  -webkit-animation: lds-ohmyfood 1.2s cubic-bezier(0, 0.5, 0.5, 1) 3;
-          animation: lds-ohmyfood 1.2s cubic-bezier(0, 0.5, 0.5, 1) 3;
-}
-body .lds-ohmyfood div:nth-child(1) {
-  background-color: #99E2D0;
-  left: 8px;
-  -webkit-animation-delay: -0.24s;
-          animation-delay: -0.24s;
-}
-body .lds-ohmyfood div:nth-child(2) {
-  background-color: #FF79DA;
-  left: 32px;
-  -webkit-animation-delay: -0.12s;
-          animation-delay: -0.12s;
-}
-body .lds-ohmyfood div:nth-child(3) {
-  background-color: #9356DC;
-  left: 56px;
-  -webkit-animation-delay: 0;
-          animation-delay: 0;
-}
-@-webkit-keyframes lds-ohmyfood {
-  0% {
-    top: 8px;
-    height: 64px;
-  }
-  100% {
-    top: 24px;
-    height: 32px;
-  }
-}
-@keyframes lds-ohmyfood {
-  0% {
-    top: 8px;
-    height: 64px;
-  }
-  100% {
-    top: 24px;
-    height: 32px;
-  }
-}
 
 h1,
 h2,
@@ -200,38 +150,42 @@ h3 {
 .main .restaurant__heart {
   font-size: 28px;
   margin-right: 10px;
+  /*margin-bottom: 28px;
+  @keyframes fade-in {
+      from {
+          opacity: 0;
+      }        
+      to {
+          opacity: 1;
+      }
+  }
+  .fa-solid {  
+      color: $secondary-color;
+      display: none;
+  }
+  .fa-regular {                            
+      display: block;
+      color: #bbb;                
+  }            
+  &:hover {
+      .fa-solid {
+          display: block;
+          animation: fade-in 3s ease-in-out;                    
+      }
+      .fa-regular {
+          display: none;
+      }
+  }*/
 }
-@-webkit-keyframes fade-in {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
+.main .restaurant__heart .fa-heart path {
+  color: #f1f1f1;
+  stroke: #000;
+  stroke-width: 5px;
+  transition: color 3s ease-out;
 }
-@keyframes fade-in {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-}
-.main .restaurant__heart .fa-solid {
+.main .restaurant__heart .fa-heart path:hover {
   color: #FF79DA;
-  display: none;
-}
-.main .restaurant__heart .fa-regular {
-  display: block;
-  color: #bbb;
-}
-.main .restaurant__heart:hover .fa-solid {
-  display: block;
-  -webkit-animation: fade-in 3s ease-in-out;
-          animation: fade-in 3s ease-in-out;
-}
-.main .restaurant__heart:hover .fa-regular {
-  display: none;
+  stroke: #FF79DA;
 }
 .main .wrapper-menu { /* IE10 */
   display: flex; /* IE10 */
@@ -280,6 +234,9 @@ h3 {
   0% {
     width: 0;
   }
+  50% {
+    width: 40px;
+  }
   100% {
     width: 80px;
   }
@@ -287,6 +244,9 @@ h3 {
 @keyframes slide-in {
   0% {
     width: 0;
+  }
+  50% {
+    width: 40px;
   }
   100% {
     width: 80px;
@@ -296,6 +256,9 @@ h3 {
   0% {
     width: 80px;
   }
+  50% {
+    width: 20px;
+  }
   100% {
     width: 0;
   }
@@ -304,11 +267,16 @@ h3 {
   0% {
     width: 80px;
   }
+  50% {
+    width: 20px;
+  }
   100% {
     width: 0;
   }
 }
 .main .wrapper-menu .menu {
+  -webkit-animation: slide-bottom-top 3s ease-in-out;
+          animation: slide-bottom-top 3s ease-in-out;
   flex: 100%;
   max-width: 100%;
   padding: 0 4px;
@@ -330,10 +298,6 @@ h3 {
   width: 30px;
   height: 2px;
   margin: 0;
-}
-.main .wrapper-menu .menu__btn {
-  -webkit-animation: slide-bottom-top 3s ease-in-out;
-          animation: slide-bottom-top 3s ease-in-out;
 }
 .main .wrapper-menu .menu__btn a {
   margin-top: 8px;
@@ -363,10 +327,8 @@ h3 {
 .main .wrapper-menu .menu__btn a:hover .menu__green-btn {
   height: 80px;
   width: 80px;
-  right: 0;
-  left: 100%;
-  -webkit-animation: slide-in 0.3s ease-in-out;
-          animation: slide-in 0.3s ease-in-out;
+  -webkit-animation: slide-in 1s ease-out;
+          animation: slide-in 1s ease-out;
 }
 .main .wrapper-menu .menu__btn a:hover .menu__green-btn em {
   -webkit-animation: rotate-360 1s;
@@ -398,13 +360,13 @@ h3 {
   align-items: center;
   overflow: hidden;
   width: 0;
-  height: 80px;
+  height: 100%;
   font-size: 30px;
   color: #fff;
   background-color: #99E2D0;
   border-radius: 0 20px 20px 0;
-  -webkit-animation: slide-out 0.5s ease-in-out;
-          animation: slide-out 0.5s ease-in-out;
+  -webkit-animation: slide-out 0.5s ease-out;
+          animation: slide-out 0.5s ease-out;
 }
 .main .wrapper-menu button {
   width: 200px;

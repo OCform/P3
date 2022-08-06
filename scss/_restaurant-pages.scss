@@ -38,7 +38,17 @@
         &__heart { 
             font-size: 28px;
             margin-right: 10px;
-            //margin-bottom: 28px;
+            .fa-heart path {
+                color: $grey-light;
+                stroke: #000;
+                stroke-width: 5px;
+                transition: color 3s ease-out;
+            }
+            .fa-heart path:hover {
+                color: $secondary-color;
+                stroke: $secondary-color;
+            }
+            /*margin-bottom: 28px;
             @keyframes fade-in {
                 from {
                     opacity: 0;
@@ -63,7 +73,8 @@
                 .fa-regular {
                     display: none;
                 }
-            }
+            }*/
+            
         }     
     }
     .wrapper-menu { 
@@ -94,21 +105,28 @@
             0% {
                 width: 0;
             }
+            50% {
+                width: 40px;                                           
+            }
             100% {
-                width: 80px;                                             
+                width: 80px;                                           
             }
         }
         @keyframes slide-out {
             0% {
                 width: 80px;
             }
+            50% {
+                width: 20px;                                           
+            }
             100% {
-                width: 0;
+                width: 0;                                           
             }
         }
         background-color: $grey-light;
         padding-bottom: 30px;
         .menu {
+            animation: slide-bottom-top 3s ease-in-out;
             -ms-flex: 100%;
             flex: 100%;
             max-width: 100%; 
@@ -132,7 +150,7 @@
                 }
             }
             &__btn {
-                animation: slide-bottom-top 3s ease-in-out;
+                
             }
             &__btn a { 
                 margin-top: 8px;
@@ -159,10 +177,8 @@
                     box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
                     .menu__green-btn {                        
                         height: 80px;
-                        width: 80px;     
-                        right: 0; 
-                        left: 100%; 
-                        animation: slide-in .3s ease-in-out;                        
+                        width: 80px;
+                        animation: slide-in 1s ease-out;                                               
                     }
                     .menu__green-btn em {
                         animation: rotate-360 1s;
@@ -195,12 +211,12 @@
                 align-items: center;   
                 overflow: hidden;                                  
                 width: 0;
-                height: 80px;                               
+                height: 100%;                               
                 font-size: 30px;
                 color: #fff;
                 background-color: $tertiary-color;                
                 border-radius: 0 20px 20px 0; 
-                animation: slide-out .5s ease-in-out;
+                animation: slide-out .5s ease-out;
             }       
         }
         button {
