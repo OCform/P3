@@ -52,32 +52,6 @@ h3 {
   margin: 0 auto;
 }
 
-/*.header {
-    &__logo {
-        display: flex;
-        justify-content: center;
-        align-items: center;    
-        height: 80px;        
-        img {
-            width: 200px;   
-        }  
-    }
-    &__home {
-        position: absolute;
-        left: 20px;
-        z-index: 1;
-        em {            
-            font-size: 20px;
-        }
-        .fa-arrow-left {
-            display: initial;
-        } 
-        .fa-home {
-            display: none;
-        }                    
-    }
-}
-*/
 .header__logo {
   position: relative;
   display: flex;
@@ -154,8 +128,8 @@ h3 {
   fill: #FF79DA;
   stroke: #FF79DA;
 }
-.main .wrapper-menu { /* IE10 */
-  display: flex; /* IE10 */
+.main .wrapper-menu {
+  display: flex;
   flex-wrap: wrap;
   padding: 0 4px;
   background-color: #f1f1f1;
@@ -374,39 +348,6 @@ h3 {
   flex-direction: column;
 }
 
-@media screen and (min-width: 768px) {
-  .footer__logo {
-    width: 600px;
-  }
-  .footer__logo img {
-    width: 250px;
-  }
-  .footer__navigation a .fa-utensils,
-.footer__navigation a .fa-handshake-angle {
-    margin-right: 5px;
-  }
-  .footer__navigation ul {
-    font-size: 20px;
-    display: flex;
-    justify-content: space-between;
-    flex-direction: row;
-  }
-}
-@media screen and (min-width: 992px) {
-  .footer__wrapper {
-    max-width: 1420px;
-    margin: 0 auto;
-  }
-  .footer__logo {
-    width: 800px;
-  }
-  .footer__logo img {
-    width: 300px;
-  }
-  .footer__navigation ul {
-    font-size: 25px;
-  }
-}
 @media screen and (min-width: 768px) {
   .header__logo {
     position: relative;
@@ -681,6 +622,22 @@ h3 {
   }
   .main__btn {
     margin: 50px auto;
+  }
+  .footer__logo {
+    width: 600px;
+  }
+  .footer__logo img {
+    width: 250px;
+  }
+  .footer__navigation a .fa-utensils,
+.footer__navigation a .fa-handshake-angle {
+    margin-right: 5px;
+  }
+  .footer__navigation ul {
+    font-size: 20px;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
   }
 }
 @media screen and (min-width: 992px) {
@@ -964,5 +921,18 @@ h3 {
   }
   .main__btn {
     margin: 50px auto;
+  }
+  .footer__wrapper {
+    max-width: 1420px;
+    margin: 0 auto;
+  }
+  .footer__logo {
+    width: 800px;
+  }
+  .footer__logo img {
+    width: 300px;
+  }
+  .footer__navigation ul {
+    font-size: 25px;
   }
 }/*# sourceMappingURL=pages.css.map */

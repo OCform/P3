@@ -1,4 +1,3 @@
-@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/js/all.min.js");
 html {
   box-sizing: border-box;
   font-size: 100%;
@@ -187,12 +186,12 @@ h3 {
   padding-bottom: 20px;
   padding-left: 10px;
 }
-.restaurants__row { /* IE10 */
-  display: flex; /* IE10 */
+.restaurants__row {
+  display: flex;
   flex-wrap: wrap;
   padding: 0 4px;
 }
-.restaurants__column { /* IE10 */
+.restaurants__column {
   flex: 100%;
   max-width: 100%;
   padding: 0 4px;
@@ -281,39 +280,6 @@ h3 {
 }
 
 @media screen and (min-width: 768px) {
-  .footer__logo {
-    width: 600px;
-  }
-  .footer__logo img {
-    width: 250px;
-  }
-  .footer__navigation a .fa-utensils,
-.footer__navigation a .fa-handshake-angle {
-    margin-right: 5px;
-  }
-  .footer__navigation ul {
-    font-size: 20px;
-    display: flex;
-    justify-content: space-between;
-    flex-direction: row;
-  }
-}
-@media screen and (min-width: 992px) {
-  .footer__wrapper {
-    max-width: 1420px;
-    margin: 0 auto;
-  }
-  .footer__logo {
-    width: 800px;
-  }
-  .footer__logo img {
-    width: 300px;
-  }
-  .footer__navigation ul {
-    font-size: 25px;
-  }
-}
-@media screen and (min-width: 768px) {
   .header__logo {
     display: flex;
     justify-content: flex-start;
@@ -370,6 +336,22 @@ h3 {
   .main .restaurants__column {
     flex: 50%;
     max-width: 50%;
+  }
+  .footer__logo {
+    width: 600px;
+  }
+  .footer__logo img {
+    width: 250px;
+  }
+  .footer__navigation a .fa-utensils,
+.footer__navigation a .fa-handshake-angle {
+    margin-right: 5px;
+  }
+  .footer__navigation ul {
+    font-size: 20px;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
   }
 }
 @media screen and (min-width: 992px) {
@@ -450,5 +432,18 @@ h3 {
   .main .restaurants__column {
     flex: 25%;
     max-width: 25%;
+  }
+  .footer__wrapper {
+    max-width: 1420px;
+    margin: 0 auto;
+  }
+  .footer__logo {
+    width: 800px;
+  }
+  .footer__logo img {
+    width: 300px;
+  }
+  .footer__navigation ul {
+    font-size: 25px;
   }
 }/*# sourceMappingURL=main.css.map */

@@ -64,7 +64,29 @@
                 max-width: 50%;
             }
         }
-    }    
+    }
+    .footer {
+        &__logo {
+            width: 600px;
+            img {
+                width: 250px;
+            }
+        }
+        &__navigation {
+            a {
+                .fa-utensils,
+                .fa-handshake-angle {
+                    margin-right: 5px;
+                }
+            }
+            ul {
+                font-size: 20px;
+                display: flex;
+                justify-content: space-between; 
+                flex-direction: row;
+            }           
+        }
+    }   
 }
 @media screen and (min-width: 992px) {
     .header {
@@ -144,6 +166,21 @@
                 flex: 25%;
                 max-width: 25%;
             }
+        }
+    }
+    .footer {
+        &__wrapper {
+            max-width: 1420px;
+            margin: 0 auto;
+        }
+        &__logo {
+            width: 800px;
+            img {
+                width: 300px;
+            }
+        }
+        &__navigation ul {
+            font-size: 25px;
         }
     }
 }
