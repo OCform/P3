@@ -389,14 +389,14 @@ h3 {
   }
   .main .restaurant img {
     width: 100%;
-    height: 400px;
+    height: 500px;
     -o-object-fit: cover;
        object-fit: cover;
   }
   .main .restaurant__container {
     position: absolute;
     width: 100%;
-    top: 380px;
+    top: 480px;
     padding: 25px 15px;
     display: flex;
     align-items: center;
@@ -409,112 +409,12 @@ h3 {
     font-size: 32px;
     margin-right: 10px;
   }
-  @-webkit-keyframes fade-in {
-    from {
-      opacity: 0;
-    }
-    to {
-      opacity: 1;
-    }
-  }
-  @keyframes fade-in {
-    from {
-      opacity: 0;
-    }
-    to {
-      opacity: 1;
-    }
-  }
-  .main .restaurant__heart .fa-solid {
-    color: #FF79DA;
-    display: none;
-  }
-  .main .restaurant__heart .fa-regular {
-    display: block;
-    color: #bbb;
-  }
-  .main .restaurant__heart:hover .fa-solid {
-    display: block;
-    -webkit-animation: fade-in 3s ease-in-out;
-            animation: fade-in 3s ease-in-out;
-  }
-  .main .restaurant__heart:hover .fa-regular {
-    display: none;
-  }
   .main .wrapper-menu {
     display: flex;
     flex-wrap: wrap;
     padding: 0 4px;
     background-color: #f1f1f1;
     padding-bottom: 30px;
-  }
-  @-webkit-keyframes slide-bottom-top {
-    0% {
-      transform: translateY(100%);
-      opacity: 0;
-    }
-    100% {
-      transform: translateY(0%);
-      opacity: 1;
-    }
-  }
-  @keyframes slide-bottom-top {
-    0% {
-      transform: translateY(100%);
-      opacity: 0;
-    }
-    100% {
-      transform: translateY(0%);
-      opacity: 1;
-    }
-  }
-  @-webkit-keyframes rotate-360 {
-    0% {
-      transform: rotate(0deg);
-    }
-    100% {
-      transform: rotate(360deg);
-    }
-  }
-  @keyframes rotate-360 {
-    0% {
-      transform: rotate(0deg);
-    }
-    100% {
-      transform: rotate(360deg);
-    }
-  }
-  @-webkit-keyframes slide-in {
-    0% {
-      width: 0;
-    }
-    100% {
-      width: 80px;
-    }
-  }
-  @keyframes slide-in {
-    0% {
-      width: 0;
-    }
-    100% {
-      width: 80px;
-    }
-  }
-  @-webkit-keyframes slide-out {
-    0% {
-      width: 80px;
-    }
-    100% {
-      width: 0;
-    }
-  }
-  @keyframes slide-out {
-    0% {
-      width: 80px;
-    }
-    100% {
-      width: 0;
-    }
   }
   .main .wrapper-menu .menu {
     flex: 33.33%;
@@ -535,17 +435,13 @@ h3 {
     height: 2px;
     margin: 0;
   }
-  .main .wrapper-menu .menu__btn {
-    -webkit-animation: slide-bottom-top 3s ease-in-out;
-            animation: slide-bottom-top 3s ease-in-out;
-  }
   .main .wrapper-menu .menu__btn a {
     margin-top: 8px;
     vertical-align: middle;
     width: 100%;
     height: 80px;
     background-color: #fff;
-    border-radius: 20px;
+    border-radius: 10px;
     display: flex;
     justify-content: space-between;
     align-items: flex-end;
@@ -569,12 +465,6 @@ h3 {
     width: 80px;
     right: 0;
     left: 100%;
-    -webkit-animation: slide-in 0.3s ease-in-out;
-            animation: slide-in 0.3s ease-in-out;
-  }
-  .main .wrapper-menu .menu__btn a:hover .menu__green-btn em {
-    -webkit-animation: rotate-360 1s;
-            animation: rotate-360 1s;
   }
   .main .wrapper-menu .menu .wrapper-text {
     display: flex;
@@ -606,9 +496,7 @@ h3 {
     font-size: 30px;
     color: #fff;
     background-color: #99E2D0;
-    border-radius: 0 20px 20px 0;
-    -webkit-animation: slide-out 0.5s ease-in-out;
-            animation: slide-out 0.5s ease-in-out;
+    border-radius: 0 10px 10px 0;
   }
   .main .wrapper-menu button {
     width: 200px;
@@ -648,10 +536,10 @@ h3 {
   .header__logo {
     position: relative;
     display: flex;
-    height: 120px;
+    height: 140px;
   }
   .header__logo img {
-    width: 400px;
+    width: 500px;
     margin-left: 90px;
   }
   .header__home {
@@ -686,14 +574,14 @@ h3 {
   }
   .main .restaurant img {
     width: 100%;
-    height: 500px;
+    height: 600px;
     -o-object-fit: cover;
        object-fit: cover;
   }
   .main .restaurant__container {
     position: absolute;
     width: 100%;
-    top: 480px;
+    top: 580px;
     padding: 25px 15px;
     display: flex;
     align-items: center;
@@ -706,38 +594,6 @@ h3 {
     font-size: 34px;
     margin-right: 10px;
   }
-  @-webkit-keyframes fade-in {
-    from {
-      opacity: 0;
-    }
-    to {
-      opacity: 1;
-    }
-  }
-  @keyframes fade-in {
-    from {
-      opacity: 0;
-    }
-    to {
-      opacity: 1;
-    }
-  }
-  .main .restaurant__heart .fa-solid {
-    color: #FF79DA;
-    display: none;
-  }
-  .main .restaurant__heart .fa-regular {
-    display: block;
-    color: #bbb;
-  }
-  .main .restaurant__heart:hover .fa-solid {
-    display: block;
-    -webkit-animation: fade-in 3s ease-in-out;
-            animation: fade-in 3s ease-in-out;
-  }
-  .main .restaurant__heart:hover .fa-regular {
-    display: none;
-  }
   .main .wrapper-menu {
     max-width: 1440px;
     margin: 0 auto;
@@ -746,74 +602,6 @@ h3 {
     padding: 0 4px;
     background-color: #f1f1f1;
     padding-bottom: 30px;
-  }
-  @-webkit-keyframes slide-bottom-top {
-    0% {
-      transform: translateY(100%);
-      opacity: 0;
-    }
-    100% {
-      transform: translateY(0%);
-      opacity: 1;
-    }
-  }
-  @keyframes slide-bottom-top {
-    0% {
-      transform: translateY(100%);
-      opacity: 0;
-    }
-    100% {
-      transform: translateY(0%);
-      opacity: 1;
-    }
-  }
-  @-webkit-keyframes rotate-360 {
-    0% {
-      transform: rotate(0deg);
-    }
-    100% {
-      transform: rotate(360deg);
-    }
-  }
-  @keyframes rotate-360 {
-    0% {
-      transform: rotate(0deg);
-    }
-    100% {
-      transform: rotate(360deg);
-    }
-  }
-  @-webkit-keyframes slide-in {
-    0% {
-      width: 0;
-    }
-    100% {
-      width: 80px;
-    }
-  }
-  @keyframes slide-in {
-    0% {
-      width: 0;
-    }
-    100% {
-      width: 80px;
-    }
-  }
-  @-webkit-keyframes slide-out {
-    0% {
-      width: 80px;
-    }
-    100% {
-      width: 0;
-    }
-  }
-  @keyframes slide-out {
-    0% {
-      width: 80px;
-    }
-    100% {
-      width: 0;
-    }
   }
   .main .wrapper-menu .menu {
     flex: 33.33%;
@@ -834,17 +622,13 @@ h3 {
     height: 2px;
     margin: 0;
   }
-  .main .wrapper-menu .menu__btn {
-    -webkit-animation: slide-bottom-top 3s ease-in-out;
-            animation: slide-bottom-top 3s ease-in-out;
-  }
   .main .wrapper-menu .menu__btn a {
     margin-top: 8px;
     vertical-align: middle;
     width: 100%;
     height: 80px;
     background-color: #fff;
-    border-radius: 20px;
+    border-radius: 10px;
     display: flex;
     justify-content: space-between;
     align-items: flex-end;
@@ -868,12 +652,6 @@ h3 {
     width: 80px;
     right: 0;
     left: 100%;
-    -webkit-animation: slide-in 0.3s ease-in-out;
-            animation: slide-in 0.3s ease-in-out;
-  }
-  .main .wrapper-menu .menu__btn a:hover .menu__green-btn em {
-    -webkit-animation: rotate-360 1s;
-            animation: rotate-360 1s;
   }
   .main .wrapper-menu .menu .wrapper-text {
     display: flex;
@@ -905,9 +683,7 @@ h3 {
     font-size: 30px;
     color: #fff;
     background-color: #99E2D0;
-    border-radius: 0 20px 20px 0;
-    -webkit-animation: slide-out 0.5s ease-in-out;
-            animation: slide-out 0.5s ease-in-out;
+    border-radius: 0 10px 10px 0;
   }
   .main .wrapper-menu button {
     width: 200px;
