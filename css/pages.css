@@ -381,6 +381,10 @@ h3 {
   .footer__logo img {
     width: 250px;
   }
+  .footer__navigation a .fa-utensils,
+.footer__navigation a .fa-handshake-angle {
+    margin-right: 5px;
+  }
   .footer__navigation ul {
     font-size: 20px;
     display: flex;
