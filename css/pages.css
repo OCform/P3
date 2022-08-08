@@ -133,7 +133,7 @@ h3 {
   flex-wrap: wrap;
   padding: 0 4px;
   background-color: #f1f1f1;
-  padding-bottom: 30px;
+  padding-bottom: 20px;
 }
 @-webkit-keyframes slide-bottom-top {
   0% {
@@ -220,10 +220,10 @@ h3 {
           animation: slide-bottom-top 3s ease-in-out;
   flex: 100%;
   max-width: 100%;
+  margin-bottom: 40px;
   padding: 0 4px;
 }
 .main .wrapper-menu .menu__title {
-  margin-top: 30px;
   margin-left: 20px;
 }
 .main .wrapper-menu .menu__title h2 {
@@ -321,7 +321,8 @@ h3 {
   cursor: pointer;
 }
 .main__btn {
-  margin: 50px auto;
+  margin: auto;
+  margin-bottom: 30px;
 }
 
 .footer {

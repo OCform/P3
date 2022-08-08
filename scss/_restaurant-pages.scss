@@ -95,14 +95,14 @@
             }
         }
         background-color: $grey-light;
-        padding-bottom: 30px;
+        padding-bottom: 20px;
         .menu {
             animation: slide-bottom-top 3s ease-in-out;
             flex: 100%;
             max-width: 100%; 
+            margin-bottom: 40px;
             padding: 0 4px;                      
             &__title {
-                margin-top: 30px;
                 margin-left: 20px;
                 h2 {
                     font-size: 12px;
@@ -201,6 +201,7 @@
         }
     }
     &__btn {
-        margin: 50px auto;
+        margin: auto;
+        margin-bottom: 30px;
     }
 }
