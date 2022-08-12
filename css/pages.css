@@ -131,7 +131,7 @@ h3 {
 .main .wrapper-menu {
   display: flex;
   flex-wrap: wrap;
-  padding: 0 4px;
+  padding: 0 8px;
   background-color: #f1f1f1;
   padding-bottom: 20px;
 }
@@ -221,7 +221,7 @@ h3 {
   flex: 100%;
   max-width: 100%;
   margin-bottom: 40px;
-  padding: 0 4px;
+  padding: 0 8px;
 }
 .main .wrapper-menu .menu__title {
   margin-left: 20px;
@@ -242,7 +242,7 @@ h3 {
   margin: 0;
 }
 .main .wrapper-menu .menu__btn a {
-  margin-top: 8px;
+  margin-top: 16px;
   vertical-align: middle;
   width: 100%;
   height: 80px;
@@ -600,14 +600,14 @@ h3 {
     margin: 0 auto;
     display: flex;
     flex-wrap: wrap;
-    padding: 0 4px;
+    padding: 0 8px;
     background-color: #f1f1f1;
     padding-bottom: 30px;
   }
   .main .wrapper-menu .menu {
     flex: 33.33%;
     max-width: 33.33%;
-    padding: 0 4px;
+    padding: 0 8px;
   }
   .main .wrapper-menu .menu__title {
     font-size: 12px;
@@ -624,7 +624,7 @@ h3 {
     margin: 0;
   }
   .main .wrapper-menu .menu__btn a {
-    margin-top: 8px;
+    margin-top: 16px;
     vertical-align: middle;
     width: 100%;
     height: 80px;
