@@ -197,3 +197,17 @@
         }
     }
 }
+@media screen and (min-width: 1440px) {
+    .main {         
+        .fonctionnement {            
+            &__btn {
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                gap: 150px;
+                padding: 0 20px;
+            }            
+        }        
+    }
+
+}
