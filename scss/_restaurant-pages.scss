@@ -42,7 +42,7 @@
                 fill: $grey-light;
                 stroke: #000;
                 stroke-width: 10px;
-                transition: fill 1s ease-out;
+                transition: fill .5s ease-out;
             }
             .fa-heart path:hover {
                 fill: $secondary-color;
