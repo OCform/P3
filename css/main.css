@@ -104,12 +104,13 @@ h3 {
   background: linear-gradient(to bottom right, #FF79DA, #9356DC);
   border: 1px solid #FF79DA;
   cursor: pointer;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.9);
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.5);
   filter: brightness(90%);
+  transition: box-shadow 0.2s ease-out;
 }
 .main__title button:hover {
-  filter: brightness(120%);
-  box-shadow: 0 16px 32px 0 rgba(0, 0, 0, 0.7);
+  filter: brightness(110%);
+  box-shadow: 0 32px 64px 0 rgb(0, 0, 0);
 }
 
 .main .fonctionnement {
@@ -254,7 +255,7 @@ h3 {
   fill: #fff;
   stroke: #000;
   stroke-width: 10px;
-  transition: fill 0.5s ease-out;
+  transition: fill 0.2s ease-out;
 }
 .restaurants__heart .fa-heart path:hover {
   fill: #FF79DA;
