@@ -20,6 +20,13 @@
             background: linear-gradient(to bottom right, $secondary-color, $primary-color);
             border: 1px solid $secondary-color;
             cursor: pointer;
+            box-shadow: 0 4px 8px 0 rgba(0,0,0,0.9);
+            filter: brightness(90%);
+            &:hover {
+                filter: brightness(120%);
+                box-shadow: 0 16px 32px 0 rgba(0,0,0,0.7);                
+            }
         }
+        
     }
 }

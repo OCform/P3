@@ -42,7 +42,7 @@
                 fill: $grey-light;
                 stroke: #000;
                 stroke-width: 10px;
-                transition: fill 3s ease-out;
+                transition: fill 1s ease-out;
             }
             .fa-heart path:hover {
                 fill: $secondary-color;
@@ -197,7 +197,13 @@
             font-weight: 700;
             background: linear-gradient(to bottom right, $secondary-color, $primary-color);
             border: 1px solid $secondary-color;
-            cursor: pointer;            
+            cursor: pointer; 
+            box-shadow: 0 4px 8px 0 rgba(0,0,0,0.9);
+            filter: brightness(90%);
+            &:hover {
+                filter: brightness(120%);
+                box-shadow: 0 16px 32px 0 rgba(0,0,0,0.7);                
+            }
         }
     }
     &__btn {
